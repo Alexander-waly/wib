@@ -79,6 +79,10 @@
             border: 1px solid #dedede;
         }
 
+        .loader {
+          width: 50px;
+        }
+
     </style>
 </head>
 
@@ -87,6 +91,7 @@
     <div class="playground">
         <div class="playground-header">
             <button id="run" disabled>Loading...</button>
+            <img class="loader" id="activity" src="./ajax.svg" />
         </div>
         <div class="playground-split-vertical">
             <div class="playground-editor">
@@ -135,6 +140,7 @@ file_put_contents("./test.php", "<?php echo 'Will this work?'; ?>");
         var input_area = document.getElementById('input');
         var run_button = document.getElementById('run');
         var output_area = document.getElementById('output').contentWindow.document;
+        var activity_area = document.getElementById('activity');
         output_area.open();
 
         var phpModule;
@@ -147,14 +153,12 @@ file_put_contents("./test.php", "<?php echo 'Will this work?'; ?>");
 
             run_button.disabled = false
             run_button.textContent = "Run"
+
             run_button.addEventListener('click', function () {
+                activity_area.style.display = '';
                 output_area.close();
                 var code = editor.getValue();
                 var query = new URLSearchParams();
-                if (code.length < 1024) {
-                    query.append('code', encodeURIComponent(code));
-                    history.replaceState({}, document.title, "?" + query.toString());
-                }
                 code = code.replace(/^\s*<\?php/, "") // remove <?php
                 code = code + "\necho PHP_EOL;" // flush line buffer
                 let ret = phpModule.ccall('pib_eval', 'number', ["string"], [code])
@@ -172,6 +176,7 @@ file_put_contents("./test.php", "<?php echo 'Will this work?'; ?>");
                     text = Array.prototype.slice.call(arguments).join(' ');
                 }
                 output_area.write(text)
+                activity_area.style.display = 'none';
             },
             printErr: function (text) {
                 if (arguments.length > 1) {
