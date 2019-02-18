@@ -42,7 +42,6 @@ wget https://wordpress.org/$WORDPRESS_PATH.tar.gz
 mkdir -p $WORDPRESS_PATH
 tar xf $WORDPRESS_PATH.tar.gz
 rm $WORDPRESS_PATH.tar.gz
-rm php-7.3.0/wordpress/wp-content/themes/twenty* || true
 
 cd ..
 
