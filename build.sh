@@ -4,6 +4,8 @@ set -e
 
 PHP_VERSION=7.3.0
 PHP_PATH=php-$PHP_VERSION
+WORDPRESS_VERSION=5.0.3
+WORDPRESS_PATH=wordpress-$WORDPRESS_VERSION
 
 echo "Get PHP source"
 wget http://downloads.php.net/~cmb/$PHP_PATH.tar.xz
@@ -33,6 +35,12 @@ emconfigure ./configure \
   --disable-mbregex \
   --enable-tokenizer
 
+echo "Get WordPress source"
+wget https://wordpress.org/$WORDPRESS_PATH.tar.gz
+mkdir -p $WORDPRESS_PATH
+tar xf $WORDPRESS_PATH.tar.gz
+rm $WORDPRESS_PATH.tar.gz
+
 echo "Build"
 emmake make
 mkdir -p out
@@ -49,6 +57,7 @@ emcc -O3 \
   -s INVOKE_RUN=0 \
   -s ERROR_ON_UNDEFINED_SYMBOLS=0 \
   --preload-file Zend/bench.php \
+  --preload-file wordpress@/var/wordpress \
   libs/libphp7.a pib_eval.o -o out/php.html
 
 cp out/php.wasm out/php.js out/php.data ..
