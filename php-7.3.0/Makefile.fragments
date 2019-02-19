@@ -1,0 +1,5 @@
+/src/php-7.3.0/ext/json/json_scanner.c: /src/php-7.3.0/ext/json/json_scanner.re
+	$(RE2C) $(RE2C_FLAGS) -t /src/php-7.3.0/ext/json/php_json_scanner_defs.h --no-generation-date -bci -o $@ /src/php-7.3.0/ext/json/json_scanner.re
+
+/src/php-7.3.0/ext/json/json_parser.tab.c: /src/php-7.3.0/ext/json/json_parser.y
+	$(YACC) --defines -l /src/php-7.3.0/ext/json/json_parser.y -o $@

@@ -1,0 +1,25 @@
+#! /bin/sh
+#
+# Created by configure
+
+CC='/emsdk_portable/sdk/emcc' \
+CXX='/emsdk_portable/sdk/em++' \
+'./configure' \
+'--disable-all' \
+'--disable-cgi' \
+'--disable-cli' \
+'--disable-rpath' \
+'--disable-phpdbg' \
+'--with-valgrind=no' \
+'--without-pear' \
+'--without-pcre-jit' \
+'--with-layout=GNU' \
+'--enable-embed=static' \
+'--enable-bcmath' \
+'--enable-json' \
+'--enable-ctype' \
+'--enable-mbstring' \
+'--disable-mbregex' \
+'--enable-tokenizer' \
+'CFLAGS=' \
+"$@"

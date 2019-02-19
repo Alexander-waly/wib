@@ -1,0 +1,989 @@
+srcdir = /src/php-7.3.0
+builddir = /src/php-7.3.0
+top_srcdir = /src/php-7.3.0
+top_builddir = /src/php-7.3.0
+EGREP = /bin/grep -E
+SED = /bin/sed
+CONFIGURE_COMMAND = './configure' '--disable-all' '--disable-cgi' '--disable-cli' '--disable-rpath' '--disable-phpdbg' '--with-valgrind=no' '--without-pear' '--without-pcre-jit' '--with-layout=GNU' '--enable-embed=static' '--enable-bcmath' '--enable-json' '--enable-ctype' '--enable-mbstring' '--disable-mbregex' '--enable-tokenizer' 'CFLAGS='
+CONFIGURE_OPTIONS = '--disable-all' '--disable-cgi' '--disable-cli' '--disable-rpath' '--disable-phpdbg' '--with-valgrind=no' '--without-pear' '--without-pcre-jit' '--with-layout=GNU' '--enable-embed=static' '--enable-bcmath' '--enable-json' '--enable-ctype' '--enable-mbstring' '--disable-mbregex' '--enable-tokenizer' 'CFLAGS='
+PHP_MAJOR_VERSION = 7
+PHP_MINOR_VERSION = 3
+PHP_RELEASE_VERSION = 0
+PHP_EXTRA_VERSION =
+AWK = nawk
+YACC = exit 0;
+RE2C = exit 0;
+RE2C_FLAGS =
+SHLIB_SUFFIX_NAME = so
+SHLIB_DL_SUFFIX_NAME = so
+PROG_SENDMAIL =
+JSON_SHARED_LIBADD =
+MBSTRING_SHARED_LIBADD =
+PHP_INSTALLED_SAPIS = embed
+PHP_EXECUTABLE =
+PHP_FASTCGI_OBJS = main/fastcgi.lo
+PHP_SAPI_OBJS = sapi/embed/php_embed.lo main/internal_functions.lo
+PHP_BINARY_OBJS = main/internal_functions_cli.lo
+PHP_GLOBAL_OBJS = ext/date/php_date.lo ext/date/lib/astro.lo ext/date/lib/dow.lo ext/date/lib/parse_date.lo ext/date/lib/parse_tz.lo ext/date/lib/timelib.lo ext/date/lib/tm2unixtime.lo ext/date/lib/unixtime2tm.lo ext/date/lib/parse_iso_intervals.lo ext/date/lib/interval.lo ext/pcre/pcre2lib/pcre2_auto_possess.lo ext/pcre/pcre2lib/pcre2_chartables.lo ext/pcre/pcre2lib/pcre2_compile.lo ext/pcre/pcre2lib/pcre2_config.lo ext/pcre/pcre2lib/pcre2_context.lo ext/pcre/pcre2lib/pcre2_dfa_match.lo ext/pcre/pcre2lib/pcre2_error.lo ext/pcre/pcre2lib/pcre2_jit_compile.lo ext/pcre/pcre2lib/pcre2_maketables.lo ext/pcre/pcre2lib/pcre2_match.lo ext/pcre/pcre2lib/pcre2_match_data.lo ext/pcre/pcre2lib/pcre2_newline.lo ext/pcre/pcre2lib/pcre2_ord2utf.lo ext/pcre/pcre2lib/pcre2_pattern_info.lo ext/pcre/pcre2lib/pcre2_serialize.lo ext/pcre/pcre2lib/pcre2_string_utils.lo ext/pcre/pcre2lib/pcre2_study.lo ext/pcre/pcre2lib/pcre2_substitute.lo ext/pcre/pcre2lib/pcre2_substring.lo ext/pcre/pcre2lib/pcre2_tables.lo ext/pcre/pcre2lib/pcre2_ucd.lo ext/pcre/pcre2lib/pcre2_valid_utf.lo ext/pcre/pcre2lib/pcre2_xclass.lo ext/pcre/pcre2lib/pcre2_find_bracket.lo ext/pcre/pcre2lib/pcre2_convert.lo ext/pcre/pcre2lib/pcre2_extuni.lo ext/pcre/php_pcre.lo ext/bcmath/bcmath.lo ext/bcmath/libbcmath/src/add.lo ext/bcmath/libbcmath/src/div.lo ext/bcmath/libbcmath/src/init.lo ext/bcmath/libbcmath/src/neg.lo ext/bcmath/libbcmath/src/outofmem.lo ext/bcmath/libbcmath/src/raisemod.lo ext/bcmath/libbcmath/src/sub.lo ext/bcmath/libbcmath/src/compare.lo ext/bcmath/libbcmath/src/divmod.lo ext/bcmath/libbcmath/src/int2num.lo ext/bcmath/libbcmath/src/num2long.lo ext/bcmath/libbcmath/src/output.lo ext/bcmath/libbcmath/src/recmul.lo ext/bcmath/libbcmath/src/sqrt.lo ext/bcmath/libbcmath/src/zero.lo ext/bcmath/libbcmath/src/debug.lo ext/bcmath/libbcmath/src/doaddsub.lo ext/bcmath/libbcmath/src/nearzero.lo ext/bcmath/libbcmath/src/num2str.lo ext/bcmath/libbcmath/src/raise.lo ext/bcmath/libbcmath/src/rmzero.lo ext/bcmath/libbcmath/src/str2num.lo ext/ctype/ctype.lo ext/json/json.lo ext/json/json_encoder.lo ext/json/json_parser.lo ext/json/json_scanner.lo ext/mbstring/libmbfl/filters/html_entities.lo ext/mbstring/libmbfl/filters/mbfilter_7bit.lo ext/mbstring/libmbfl/filters/mbfilter_ascii.lo ext/mbstring/libmbfl/filters/mbfilter_base64.lo ext/mbstring/libmbfl/filters/mbfilter_big5.lo ext/mbstring/libmbfl/filters/mbfilter_byte2.lo ext/mbstring/libmbfl/filters/mbfilter_byte4.lo ext/mbstring/libmbfl/filters/mbfilter_cp1251.lo ext/mbstring/libmbfl/filters/mbfilter_cp1252.lo ext/mbstring/libmbfl/filters/mbfilter_cp1254.lo ext/mbstring/libmbfl/filters/mbfilter_cp5022x.lo ext/mbstring/libmbfl/filters/mbfilter_cp51932.lo ext/mbstring/libmbfl/filters/mbfilter_cp850.lo ext/mbstring/libmbfl/filters/mbfilter_cp866.lo ext/mbstring/libmbfl/filters/mbfilter_cp932.lo ext/mbstring/libmbfl/filters/mbfilter_cp936.lo ext/mbstring/libmbfl/filters/mbfilter_gb18030.lo ext/mbstring/libmbfl/filters/mbfilter_euc_cn.lo ext/mbstring/libmbfl/filters/mbfilter_euc_jp.lo ext/mbstring/libmbfl/filters/mbfilter_euc_jp_2004.lo ext/mbstring/libmbfl/filters/mbfilter_euc_jp_win.lo ext/mbstring/libmbfl/filters/mbfilter_euc_kr.lo ext/mbstring/libmbfl/filters/mbfilter_euc_tw.lo ext/mbstring/libmbfl/filters/mbfilter_htmlent.lo ext/mbstring/libmbfl/filters/mbfilter_hz.lo ext/mbstring/libmbfl/filters/mbfilter_iso2022_jp_ms.lo ext/mbstring/libmbfl/filters/mbfilter_iso2022jp_2004.lo ext/mbstring/libmbfl/filters/mbfilter_iso2022jp_mobile.lo ext/mbstring/libmbfl/filters/mbfilter_iso2022_kr.lo ext/mbstring/libmbfl/filters/mbfilter_iso8859_1.lo ext/mbstring/libmbfl/filters/mbfilter_iso8859_10.lo ext/mbstring/libmbfl/filters/mbfilter_iso8859_13.lo ext/mbstring/libmbfl/filters/mbfilter_iso8859_14.lo ext/mbstring/libmbfl/filters/mbfilter_iso8859_15.lo ext/mbstring/libmbfl/filters/mbfilter_iso8859_16.lo ext/mbstring/libmbfl/filters/mbfilter_iso8859_2.lo ext/mbstring/libmbfl/filters/mbfilter_iso8859_3.lo ext/mbstring/libmbfl/filters/mbfilter_iso8859_4.lo ext/mbstring/libmbfl/filters/mbfilter_iso8859_5.lo ext/mbstring/libmbfl/filters/mbfilter_iso8859_6.lo ext/mbstring/libmbfl/filters/mbfilter_iso8859_7.lo ext/mbstring/libmbfl/filters/mbfilter_iso8859_8.lo ext/mbstring/libmbfl/filters/mbfilter_iso8859_9.lo ext/mbstring/libmbfl/filters/mbfilter_jis.lo ext/mbstring/libmbfl/filters/mbfilter_koi8r.lo ext/mbstring/libmbfl/filters/mbfilter_armscii8.lo ext/mbstring/libmbfl/filters/mbfilter_qprint.lo ext/mbstring/libmbfl/filters/mbfilter_sjis.lo ext/mbstring/libmbfl/filters/mbfilter_sjis_open.lo ext/mbstring/libmbfl/filters/mbfilter_sjis_mobile.lo ext/mbstring/libmbfl/filters/mbfilter_sjis_mac.lo ext/mbstring/libmbfl/filters/mbfilter_sjis_2004.lo ext/mbstring/libmbfl/filters/mbfilter_tl_jisx0201_jisx0208.lo ext/mbstring/libmbfl/filters/mbfilter_ucs2.lo ext/mbstring/libmbfl/filters/mbfilter_ucs4.lo ext/mbstring/libmbfl/filters/mbfilter_uhc.lo ext/mbstring/libmbfl/filters/mbfilter_utf16.lo ext/mbstring/libmbfl/filters/mbfilter_utf32.lo ext/mbstring/libmbfl/filters/mbfilter_utf7.lo ext/mbstring/libmbfl/filters/mbfilter_utf7imap.lo ext/mbstring/libmbfl/filters/mbfilter_utf8.lo ext/mbstring/libmbfl/filters/mbfilter_utf8_mobile.lo ext/mbstring/libmbfl/filters/mbfilter_uuencode.lo ext/mbstring/libmbfl/filters/mbfilter_koi8u.lo ext/mbstring/libmbfl/mbfl/mbfilter.lo ext/mbstring/libmbfl/mbfl/mbfilter_8bit.lo ext/mbstring/libmbfl/mbfl/mbfilter_pass.lo ext/mbstring/libmbfl/mbfl/mbfilter_wchar.lo ext/mbstring/libmbfl/mbfl/mbfl_convert.lo ext/mbstring/libmbfl/mbfl/mbfl_encoding.lo ext/mbstring/libmbfl/mbfl/mbfl_filter_output.lo ext/mbstring/libmbfl/mbfl/mbfl_ident.lo ext/mbstring/libmbfl/mbfl/mbfl_language.lo ext/mbstring/libmbfl/mbfl/mbfl_memory_device.lo ext/mbstring/libmbfl/mbfl/mbfl_string.lo ext/mbstring/libmbfl/mbfl/mbfl_allocators.lo ext/mbstring/libmbfl/nls/nls_de.lo ext/mbstring/libmbfl/nls/nls_en.lo ext/mbstring/libmbfl/nls/nls_ja.lo ext/mbstring/libmbfl/nls/nls_kr.lo ext/mbstring/libmbfl/nls/nls_neutral.lo ext/mbstring/libmbfl/nls/nls_ru.lo ext/mbstring/libmbfl/nls/nls_uni.lo ext/mbstring/libmbfl/nls/nls_zh.lo ext/mbstring/libmbfl/nls/nls_hy.lo ext/mbstring/libmbfl/nls/nls_tr.lo ext/mbstring/libmbfl/nls/nls_ua.lo ext/mbstring/mbstring.lo ext/mbstring/php_unicode.lo ext/mbstring/mb_gpc.lo ext/reflection/php_reflection.lo ext/spl/php_spl.lo ext/spl/spl_functions.lo ext/spl/spl_engine.lo ext/spl/spl_iterators.lo ext/spl/spl_array.lo ext/spl/spl_directory.lo ext/spl/spl_exceptions.lo ext/spl/spl_observer.lo ext/spl/spl_dllist.lo ext/spl/spl_heap.lo ext/spl/spl_fixedarray.lo ext/standard/crypt_freesec.lo ext/standard/crypt_blowfish.lo ext/standard/crypt_sha512.lo ext/standard/crypt_sha256.lo ext/standard/php_crypt_r.lo ext/standard/array.lo ext/standard/base64.lo ext/standard/basic_functions.lo ext/standard/browscap.lo ext/standard/crc32.lo ext/standard/crypt.lo ext/standard/cyr_convert.lo ext/standard/datetime.lo ext/standard/dir.lo ext/standard/dl.lo ext/standard/dns.lo ext/standard/exec.lo ext/standard/file.lo ext/standard/filestat.lo ext/standard/flock_compat.lo ext/standard/formatted_print.lo ext/standard/fsock.lo ext/standard/head.lo ext/standard/html.lo ext/standard/image.lo ext/standard/info.lo ext/standard/iptc.lo ext/standard/lcg.lo ext/standard/link.lo ext/standard/mail.lo ext/standard/math.lo ext/standard/md5.lo ext/standard/metaphone.lo ext/standard/microtime.lo ext/standard/pack.lo ext/standard/pageinfo.lo ext/standard/quot_print.lo ext/standard/rand.lo ext/standard/mt_rand.lo ext/standard/soundex.lo ext/standard/string.lo ext/standard/scanf.lo ext/standard/syslog.lo ext/standard/type.lo ext/standard/uniqid.lo ext/standard/url.lo ext/standard/var.lo ext/standard/versioning.lo ext/standard/assert.lo ext/standard/strnatcmp.lo ext/standard/levenshtein.lo ext/standard/incomplete_class.lo ext/standard/url_scanner_ex.lo ext/standard/ftp_fopen_wrapper.lo ext/standard/http_fopen_wrapper.lo ext/standard/php_fopen_wrapper.lo ext/standard/credits.lo ext/standard/css.lo ext/standard/var_unserializer.lo ext/standard/ftok.lo ext/standard/sha1.lo ext/standard/user_filters.lo ext/standard/uuencode.lo ext/standard/filters.lo ext/standard/proc_open.lo ext/standard/streamsfuncs.lo ext/standard/http.lo ext/standard/password.lo ext/standard/random.lo ext/standard/net.lo ext/standard/hrtime.lo ext/tokenizer/tokenizer.lo ext/tokenizer/tokenizer_data.lo TSRM/TSRM.lo TSRM/tsrm_strtok_r.lo main/main.lo main/snprintf.lo main/spprintf.lo main/php_sprintf.lo main/fopen_wrappers.lo main/alloca.lo main/php_scandir.lo main/php_ini.lo main/SAPI.lo main/rfc1867.lo main/php_content_types.lo main/strlcpy.lo main/strlcat.lo main/explicit_bzero.lo main/mergesort.lo main/reentrancy.lo main/php_variables.lo main/php_ticks.lo main/network.lo main/php_open_temporary_file.lo main/output.lo main/getopt.lo main/php_syslog.lo main/streams/streams.lo main/streams/cast.lo main/streams/memory.lo main/streams/filter.lo main/streams/plain_wrapper.lo main/streams/userspace.lo main/streams/transports.lo main/streams/xp_socket.lo main/streams/mmap.lo main/streams/glob_wrapper.lo Zend/zend_language_parser.lo Zend/zend_language_scanner.lo Zend/zend_ini_parser.lo Zend/zend_ini_scanner.lo Zend/zend_alloc.lo Zend/zend_compile.lo Zend/zend_constants.lo Zend/zend_dtrace.lo Zend/zend_execute_API.lo Zend/zend_highlight.lo Zend/zend_llist.lo Zend/zend_vm_opcodes.lo Zend/zend_opcode.lo Zend/zend_operators.lo Zend/zend_ptr_stack.lo Zend/zend_stack.lo Zend/zend_variables.lo Zend/zend.lo Zend/zend_API.lo Zend/zend_extensions.lo Zend/zend_hash.lo Zend/zend_list.lo Zend/zend_builtin_functions.lo Zend/zend_sprintf.lo Zend/zend_ini.lo Zend/zend_sort.lo Zend/zend_multibyte.lo Zend/zend_ts_hash.lo Zend/zend_stream.lo Zend/zend_iterators.lo Zend/zend_interfaces.lo Zend/zend_exceptions.lo Zend/zend_strtod.lo Zend/zend_gc.lo Zend/zend_closures.lo Zend/zend_float.lo Zend/zend_string.lo Zend/zend_signal.lo Zend/zend_generators.lo Zend/zend_virtual_cwd.lo Zend/zend_ast.lo Zend/zend_objects.lo Zend/zend_object_handlers.lo Zend/zend_objects_API.lo Zend/zend_default_classes.lo Zend/zend_inheritance.lo Zend/zend_smart_str.lo Zend/zend_cpuinfo.lo Zend/zend_execute.lo
+PHP_BINARIES =
+PHP_MODULES =
+PHP_ZEND_EX =
+EXT_LIBS =
+abs_builddir = /src/php-7.3.0
+abs_srcdir = /src/php-7.3.0
+php_abs_top_builddir = /src/php-7.3.0
+php_abs_top_srcdir = /src/php-7.3.0
+bindir = ${exec_prefix}/bin
+sbindir = ${exec_prefix}/sbin
+exec_prefix = ${prefix}
+program_prefix =
+program_suffix =
+includedir = ${prefix}/include
+libdir = ${exec_prefix}/lib/php
+mandir = ${datarootdir}/man
+phplibdir = /src/php-7.3.0/modules
+phptempdir = /src/php-7.3.0/libs
+prefix = /usr/local
+localstatedir = ${prefix}/var
+datadir = ${datarootdir}/php
+datarootdir = /usr/local/share
+sysconfdir = ${prefix}/etc
+EXEEXT =
+CC = /emsdk_portable/sdk/emcc
+CFLAGS = $(CFLAGS_CLEAN) -prefer-non-pic -static
+CFLAGS_CLEAN = -fvisibility=hidden -DZEND_SIGNALS $(PROF_FLAGS)
+CPP = /emsdk_portable/sdk/emcc -E
+CPPFLAGS =
+CXX = /emsdk_portable/sdk/em++
+CXXFLAGS = -prefer-non-pic -static $(PROF_FLAGS)
+CXXFLAGS_CLEAN =
+DEBUG_CFLAGS =
+EXTENSION_DIR = /usr/local/lib/php/20180731
+EXTRA_LDFLAGS =
+EXTRA_LDFLAGS_PROGRAM =
+EXTRA_LIBS = -lrt -lm
+ZEND_EXTRA_LIBS =
+INCLUDES = -I/src/php-7.3.0/ext/date/lib -I/src/php-7.3.0/ext/mbstring/libmbfl -I/src/php-7.3.0/ext/mbstring/libmbfl/mbfl -I$(top_builddir)/TSRM -I$(top_builddir)/Zend
+EXTRA_INCLUDES =
+INCLUDE_PATH = .:
+INSTALL_IT = $(mkinstalldirs) $(INSTALL_ROOT)$(prefix)/lib; $(INSTALL) -m 0644 libs/libphp7.a $(INSTALL_ROOT)$(prefix)/lib
+LFLAGS =
+LIBTOOL = $(SHELL) $(top_builddir)/libtool --silent --preserve-dup-deps
+LN_S = ln -s
+NATIVE_RPATHS =
+PEAR_INSTALLDIR =
+PHP_BUILD_DATE = 2019-02-19
+PHP_LDFLAGS =
+PHP_LIBS =
+OVERALL_TARGET = libphp7.la
+PHP_RPATHS =
+PHP_SAPI = embed
+PHP_VERSION = 7.3.0
+PHP_VERSION_ID = 70300
+SHELL = /bin/bash
+SHARED_LIBTOOL = $(LIBTOOL)
+WARNING_LEVEL =
+PHP_FRAMEWORKS =
+PHP_FRAMEWORKPATH =
+INSTALL_HEADERS = sapi/embed/php_embed.h ext/date/php_date.h ext/date/lib/timelib.h ext/date/lib/timelib_config.h ext/pcre/php_pcre.h ext/pcre/pcre2lib/ ext/json/php_json.h ext/json/php_json_parser.h ext/json/php_json_scanner.h ext/mbstring/libmbfl/config.h ext/mbstring/libmbfl/mbfl/eaw_table.h ext/mbstring/libmbfl/mbfl/mbfilter.h ext/mbstring/libmbfl/mbfl/mbfilter_8bit.h ext/mbstring/libmbfl/mbfl/mbfilter_pass.h ext/mbstring/libmbfl/mbfl/mbfilter_wchar.h ext/mbstring/libmbfl/mbfl/mbfl_allocators.h ext/mbstring/libmbfl/mbfl/mbfl_consts.h ext/mbstring/libmbfl/mbfl/mbfl_convert.h ext/mbstring/libmbfl/mbfl/mbfl_defs.h ext/mbstring/libmbfl/mbfl/mbfl_encoding.h ext/mbstring/libmbfl/mbfl/mbfl_filter_output.h ext/mbstring/libmbfl/mbfl/mbfl_ident.h ext/mbstring/libmbfl/mbfl/mbfl_language.h ext/mbstring/libmbfl/mbfl/mbfl_memory_device.h ext/mbstring/libmbfl/mbfl/mbfl_string.h ext/mbstring/mbstring.h ext/spl/php_spl.h ext/spl/spl_array.h ext/spl/spl_directory.h ext/spl/spl_engine.h ext/spl/spl_exceptions.h ext/spl/spl_functions.h ext/spl/spl_iterators.h ext/spl/spl_observer.h ext/spl/spl_dllist.h ext/spl/spl_heap.h ext/spl/spl_fixedarray.h ext/standard/ Zend/ TSRM/ include/ main/ main/streams/
+ZEND_EXT_TYPE = zend_extension
+all_targets = $(OVERALL_TARGET) $(PHP_MODULES) $(PHP_ZEND_EX) $(PHP_BINARIES)
+install_targets = install-sapi install-build install-headers install-programs
+install_binary_targets =
+mkinstalldirs = $(top_srcdir)/build/shtool mkdir -p
+INSTALL = $(top_srcdir)/build/shtool install -c
+INSTALL_DATA = $(INSTALL) -m 644
+
+DEFS = -DPHP_ATOM_INC -I$(top_builddir)/include -I$(top_builddir)/main -I$(top_srcdir)
+COMMON_FLAGS = $(DEFS) $(INCLUDES) $(EXTRA_INCLUDES) $(CPPFLAGS) $(PHP_FRAMEWORKPATH)
+
+all: $(all_targets)
+	@echo
+	@echo "Build complete."
+	@echo "Don't forget to run 'make test'."
+	@echo
+
+build-modules: $(PHP_MODULES) $(PHP_ZEND_EX)
+
+build-binaries: $(PHP_BINARIES)
+
+libphp$(PHP_MAJOR_VERSION).la: $(PHP_GLOBAL_OBJS) $(PHP_SAPI_OBJS)
+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -rpath $(phptempdir) $(EXTRA_LDFLAGS) $(LDFLAGS) $(PHP_RPATHS) $(PHP_GLOBAL_OBJS) $(PHP_SAPI_OBJS) $(EXTRA_LIBS) $(ZEND_EXTRA_LIBS) -o $@
+	-@$(LIBTOOL) --silent --mode=install cp $@ $(phptempdir)/$@ >/dev/null 2>&1
+
+libs/libphp$(PHP_MAJOR_VERSION).bundle: $(PHP_GLOBAL_OBJS) $(PHP_SAPI_OBJS)
+	$(CC) $(MH_BUNDLE_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) $(EXTRA_LDFLAGS) $(PHP_GLOBAL_OBJS:.lo=.o) $(PHP_SAPI_OBJS:.lo=.o) $(PHP_FRAMEWORKS) $(EXTRA_LIBS) $(ZEND_EXTRA_LIBS) -o $@ && cp $@ libs/libphp$(PHP_MAJOR_VERSION).so
+
+install: $(all_targets) $(install_targets)
+
+install-sapi: $(OVERALL_TARGET)
+	@echo "Installing PHP SAPI module:       $(PHP_SAPI)"
+	-@$(mkinstalldirs) $(INSTALL_ROOT)$(bindir)
+	-@if test ! -r $(phptempdir)/libphp$(PHP_MAJOR_VERSION).$(SHLIB_DL_SUFFIX_NAME); then \
+		for i in 0.0.0 0.0 0; do \
+			if test -r $(phptempdir)/libphp$(PHP_MAJOR_VERSION).$(SHLIB_DL_SUFFIX_NAME).$$i; then \
+				$(LN_S) $(phptempdir)/libphp$(PHP_MAJOR_VERSION).$(SHLIB_DL_SUFFIX_NAME).$$i $(phptempdir)/libphp$(PHP_MAJOR_VERSION).$(SHLIB_DL_SUFFIX_NAME); \
+				break; \
+			fi; \
+		done; \
+	fi
+	@$(INSTALL_IT)
+
+install-binaries: build-binaries $(install_binary_targets)
+
+install-modules: build-modules
+	@test -d modules && \
+	$(mkinstalldirs) $(INSTALL_ROOT)$(EXTENSION_DIR)
+	@echo "Installing shared extensions:     $(INSTALL_ROOT)$(EXTENSION_DIR)/"
+	@rm -f modules/*.la >/dev/null 2>&1
+	@$(INSTALL) modules/* $(INSTALL_ROOT)$(EXTENSION_DIR)
+
+install-headers:
+	-@if test "$(INSTALL_HEADERS)"; then \
+		for i in `echo $(INSTALL_HEADERS)`; do \
+			i=`$(top_srcdir)/build/shtool path -d $$i`; \
+			paths="$$paths $(INSTALL_ROOT)$(phpincludedir)/$$i"; \
+		done; \
+		$(mkinstalldirs) $$paths && \
+		echo "Installing header files:          $(INSTALL_ROOT)$(phpincludedir)/" && \
+		for i in `echo $(INSTALL_HEADERS)`; do \
+			if test "$(PHP_PECL_EXTENSION)"; then \
+				src=`echo $$i | $(SED) -e "s#ext/$(PHP_PECL_EXTENSION)/##g"`; \
+			else \
+				src=$$i; \
+			fi; \
+			if test -f "$(top_srcdir)/$$src"; then \
+				$(INSTALL_DATA) $(top_srcdir)/$$src $(INSTALL_ROOT)$(phpincludedir)/$$i; \
+			elif test -f "$(top_builddir)/$$src"; then \
+				$(INSTALL_DATA) $(top_builddir)/$$src $(INSTALL_ROOT)$(phpincludedir)/$$i; \
+			else \
+				(cd $(top_srcdir)/$$src && $(INSTALL_DATA) *.h $(INSTALL_ROOT)$(phpincludedir)/$$i; \
+				cd $(top_builddir)/$$src && $(INSTALL_DATA) *.h $(INSTALL_ROOT)$(phpincludedir)/$$i) 2>/dev/null || true; \
+			fi \
+		done; \
+	fi
+
+PHP_TEST_SETTINGS = -d 'open_basedir=' -d 'output_buffering=0' -d 'memory_limit=-1'
+PHP_TEST_SHARED_EXTENSIONS =  ` \
+	if test "x$(PHP_MODULES)" != "x"; then \
+		for i in $(PHP_MODULES)""; do \
+			. $$i; $(top_srcdir)/build/shtool echo -n -- " -d extension=$$dlname"; \
+		done; \
+	fi; \
+	if test "x$(PHP_ZEND_EX)" != "x"; then \
+		for i in $(PHP_ZEND_EX)""; do \
+			. $$i; $(top_srcdir)/build/shtool echo -n -- " -d $(ZEND_EXT_TYPE)=$(top_builddir)/modules/$$dlname"; \
+		done; \
+	fi`
+PHP_DEPRECATED_DIRECTIVES_REGEX = '^(magic_quotes_(gpc|runtime|sybase)?|(zend_)?extension(_debug)?(_ts)?)[\t\ ]*='
+
+test: all
+	@if test ! -z "$(PHP_EXECUTABLE)" && test -x "$(PHP_EXECUTABLE)"; then \
+		INI_FILE=`$(PHP_EXECUTABLE) -d 'display_errors=stderr' -r 'echo php_ini_loaded_file();' 2> /dev/null`; \
+		if test "$$INI_FILE"; then \
+			$(EGREP) -h -v $(PHP_DEPRECATED_DIRECTIVES_REGEX) "$$INI_FILE" > $(top_builddir)/tmp-php.ini; \
+		else \
+			echo > $(top_builddir)/tmp-php.ini; \
+		fi; \
+		INI_SCANNED_PATH=`$(PHP_EXECUTABLE) -d 'display_errors=stderr' -r '$$a = explode(",\n", trim(php_ini_scanned_files())); echo $$a[0];' 2> /dev/null`; \
+		if test "$$INI_SCANNED_PATH"; then \
+			INI_SCANNED_PATH=`$(top_srcdir)/build/shtool path -d $$INI_SCANNED_PATH`; \
+			$(EGREP) -h -v $(PHP_DEPRECATED_DIRECTIVES_REGEX) "$$INI_SCANNED_PATH"/*.ini >> $(top_builddir)/tmp-php.ini; \
+		fi; \
+		TEST_PHP_EXECUTABLE=$(PHP_EXECUTABLE) \
+		TEST_PHP_SRCDIR=$(top_srcdir) \
+		CC="$(CC)" \
+			$(PHP_EXECUTABLE) -n -c $(top_builddir)/tmp-php.ini $(PHP_TEST_SETTINGS) $(top_srcdir)/run-tests.php -n -c $(top_builddir)/tmp-php.ini -d extension_dir=$(top_builddir)/modules/ $(PHP_TEST_SHARED_EXTENSIONS) $(TESTS); \
+		TEST_RESULT_EXIT_CODE=$$?; \
+		rm $(top_builddir)/tmp-php.ini; \
+		exit $$TEST_RESULT_EXIT_CODE; \
+	else \
+		echo "ERROR: Cannot run tests without CLI sapi."; \
+	fi
+
+clean:
+	find . -name \*.gcno -o -name \*.gcda | xargs rm -f
+	find . -name \*.lo -o -name \*.o | xargs rm -f
+	find . -name \*.la -o -name \*.a | xargs rm -f
+	find . -name \*.so | xargs rm -f
+	find . -name .libs -a -type d|xargs rm -rf
+	rm -f libphp$(PHP_MAJOR_VERSION).la $(SAPI_CLI_PATH) $(SAPI_CGI_PATH) $(SAPI_LITESPEED_PATH) $(SAPI_FPM_PATH) $(OVERALL_TARGET) modules/* libs/*
+
+distclean: clean
+	rm -f Makefile config.cache config.log config.status Makefile.objects Makefile.fragments libtool main/php_config.h main/internal_functions_cli.c main/internal_functions.c stamp-h buildmk.stamp Zend/zend_dtrace_gen.h Zend/zend_dtrace_gen.h.bak Zend/zend_config.h TSRM/tsrm_config.h
+	rm -f php7.spec main/build-defs.h scripts/phpize
+	rm -f ext/date/lib/timelib_config.h ext/mbstring/oniguruma/config.h ext/mbstring/libmbfl/config.h ext/oci8/oci8_dtrace_gen.h ext/oci8/oci8_dtrace_gen.h.bak
+	rm -f scripts/man1/phpize.1 scripts/php-config scripts/man1/php-config.1 sapi/cli/php.1 sapi/cgi/php-cgi.1 sapi/phpdbg/phpdbg.1 ext/phar/phar.1 ext/phar/phar.phar.1
+	rm -f sapi/fpm/php-fpm.conf sapi/fpm/init.d.php-fpm sapi/fpm/php-fpm.service sapi/fpm/php-fpm.8 sapi/fpm/status.html
+	rm -f ext/iconv/php_have_bsd_iconv.h ext/iconv/php_have_glibc_iconv.h ext/iconv/php_have_ibm_iconv.h ext/iconv/php_have_iconv.h ext/iconv/php_have_libiconv.h ext/iconv/php_iconv_aliased_libiconv.h ext/iconv/php_iconv_supports_errno.h ext/iconv/php_php_iconv_h_path.h ext/iconv/php_php_iconv_impl.h
+	rm -f ext/phar/phar.phar ext/phar/phar.php
+	if test "$(srcdir)" != "$(builddir)"; then \
+	  rm -f ext/phar/phar/phar.inc; \
+	fi
+	$(EGREP) define'.*include/php' $(top_srcdir)/configure | $(SED) 's/.*>//'|xargs rm -f
+
+prof-gen:
+	CCACHE_DISABLE=1 $(MAKE) PROF_FLAGS=-fprofile-generate all
+
+prof-clean:
+	find . -name \*.lo -o -name \*.o | xargs rm -f
+	find . -name \*.la -o -name \*.a | xargs rm -f
+	find . -name \*.so | xargs rm -f
+	rm -f libphp$(PHP_MAJOR_VERSION).la $(SAPI_CLI_PATH) $(SAPI_CGI_PATH) $(SAPI_LITESPEED_PATH) $(SAPI_FPM_PATH) $(OVERALL_TARGET) modules/* libs/*
+
+prof-use:
+	CCACHE_DISABLE=1 $(MAKE) PROF_FLAGS=-fprofile-use all
+
+
+.PHONY: all clean install distclean test prof-gen prof-clean prof-use
+.NOEXPORT:
+/src/php-7.3.0/ext/json/json_scanner.c: /src/php-7.3.0/ext/json/json_scanner.re
+	$(RE2C) $(RE2C_FLAGS) -t /src/php-7.3.0/ext/json/php_json_scanner_defs.h --no-generation-date -bci -o $@ /src/php-7.3.0/ext/json/json_scanner.re
+
+/src/php-7.3.0/ext/json/json_parser.tab.c: /src/php-7.3.0/ext/json/json_parser.y
+	$(YACC) --defines -l /src/php-7.3.0/ext/json/json_parser.y -o $@
+/src/php-7.3.0/ext/standard/var_unserializer.c: /src/php-7.3.0/ext/standard/var_unserializer.re
+	@(cd $(top_srcdir); $(RE2C) $(RE2C_FLAGS) --no-generation-date -b -o ext/standard/var_unserializer.c ext/standard/var_unserializer.re)
+
+/src/php-7.3.0/ext/standard/url_scanner_ex.c: /src/php-7.3.0/ext/standard/url_scanner_ex.re
+	@(cd $(top_srcdir); $(RE2C) $(RE2C_FLAGS) --no-generation-date -b -o ext/standard/url_scanner_ex.c	ext/standard/url_scanner_ex.re)
+
+ext/standard/info.lo: ext/standard/../../main/build-defs.h
+
+ext/standard/basic_functions.lo: $(top_srcdir)/Zend/zend_language_parser.h
+$(top_srcdir)/Zend/zend_language_parser.c:
+$(top_srcdir)/Zend/zend_language_scanner.c:
+$(top_srcdir)/ext/tokenizer/tokenizer_data.c: $(top_srcdir)/Zend/zend_language_parser.h
+ext/tokenizer/tokenizer.lo: $(top_srcdir)/Zend/zend_language_parser.c $(top_srcdir)/Zend/zend_language_scanner.c
+#
+# Build environment install
+#
+
+phpincludedir = $(includedir)/php
+phpbuilddir = $(libdir)/build
+
+BUILD_FILES = \
+	scripts/phpize.m4 \
+	build/mkdep.awk \
+	build/scan_makefile_in.awk \
+	build/libtool.m4 \
+	build/ax_check_compile_flag.m4 \
+	build/ax_gcc_func_attribute.m4 \
+	Makefile.global \
+	acinclude.m4 \
+	ltmain.sh \
+	run-tests.php
+
+BUILD_FILES_EXEC = \
+	build/shtool \
+	config.guess \
+	config.sub
+
+bin_SCRIPTS = phpize php-config
+man_PAGES = phpize php-config
+
+install-build:
+	@echo "Installing build environment:     $(INSTALL_ROOT)$(phpbuilddir)/"
+	@$(mkinstalldirs) $(INSTALL_ROOT)$(phpbuilddir) $(INSTALL_ROOT)$(bindir) && \
+	(cd $(top_srcdir) && \
+	$(INSTALL) $(BUILD_FILES_EXEC) $(INSTALL_ROOT)$(phpbuilddir) && \
+	$(INSTALL_DATA) $(BUILD_FILES) $(INSTALL_ROOT)$(phpbuilddir))
+
+install-programs: scripts/phpize scripts/php-config
+	@echo "Installing helper programs:       $(INSTALL_ROOT)$(bindir)/"
+	@$(mkinstalldirs) $(INSTALL_ROOT)$(bindir)
+	@for prog in $(bin_SCRIPTS); do \
+		echo "  program: $(program_prefix)$${prog}$(program_suffix)"; \
+		$(INSTALL) -m 755 scripts/$${prog} $(INSTALL_ROOT)$(bindir)/$(program_prefix)$${prog}$(program_suffix); \
+	done
+	@echo "Installing man pages:             $(INSTALL_ROOT)$(mandir)/man1/"
+	@$(mkinstalldirs) $(INSTALL_ROOT)$(mandir)/man1
+	@for page in $(man_PAGES); do \
+		echo "  page: $(program_prefix)$${page}$(program_suffix).1"; \
+		$(INSTALL_DATA) scripts/man1/$${page}.1 $(INSTALL_ROOT)$(mandir)/man1/$(program_prefix)$${page}$(program_suffix).1; \
+	done
+
+scripts/phpize: /src/php-7.3.0/scripts/phpize.in $(top_builddir)/config.status
+	(CONFIG_FILES=$@ CONFIG_HEADERS= $(top_builddir)/config.status)
+
+scripts/php-config: /src/php-7.3.0/scripts/php-config.in $(top_builddir)/config.status
+	(CONFIG_FILES=$@ CONFIG_HEADERS= $(top_builddir)/config.status)
+#
+# Zend
+#
+
+Zend/zend_language_scanner.lo: /src/php-7.3.0/Zend/zend_language_parser.h
+Zend/zend_ini_scanner.lo: /src/php-7.3.0/Zend/zend_ini_parser.h
+
+/src/php-7.3.0/Zend/zend_language_scanner.c: /src/php-7.3.0/Zend/zend_language_scanner.l
+	@(cd $(top_srcdir); $(RE2C) $(RE2C_FLAGS) --no-generation-date --case-inverted -cbdFt Zend/zend_language_scanner_defs.h -oZend/zend_language_scanner.c Zend/zend_language_scanner.l)
+
+/src/php-7.3.0/Zend/zend_language_parser.h: /src/php-7.3.0/Zend/zend_language_parser.c
+/src/php-7.3.0/Zend/zend_language_parser.c: /src/php-7.3.0/Zend/zend_language_parser.y
+	@$(YACC) -p zend -v -d /src/php-7.3.0/Zend/zend_language_parser.y -o $@
+
+/src/php-7.3.0/Zend/zend_ini_parser.h: /src/php-7.3.0/Zend/zend_ini_parser.c
+/src/php-7.3.0/Zend/zend_ini_parser.c: /src/php-7.3.0/Zend/zend_ini_parser.y
+	@$(YACC) -p ini_ -v -d /src/php-7.3.0/Zend/zend_ini_parser.y -o $@
+
+/src/php-7.3.0/Zend/zend_ini_scanner.c: /src/php-7.3.0/Zend/zend_ini_scanner.l
+	@(cd $(top_srcdir); $(RE2C) $(RE2C_FLAGS) --no-generation-date --case-inverted -cbdFt Zend/zend_ini_scanner_defs.h -oZend/zend_ini_scanner.c Zend/zend_ini_scanner.l)
+
+Zend/zend_highlight.lo Zend/zend_compile.lo: /src/php-7.3.0/Zend/zend_language_parser.h
+Zend/zend_execute.lo: /src/php-7.3.0/Zend/zend_vm_execute.h /src/php-7.3.0/Zend/zend_vm_opcodes.h
+sapi/embed/php_embed.lo: /src/php-7.3.0/sapi/embed/php_embed.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Isapi/embed/ -I/src/php-7.3.0/sapi/embed/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/sapi/embed/php_embed.c -o sapi/embed/php_embed.lo 
+ext/date/php_date.lo: /src/php-7.3.0/ext/date/php_date.c
+	$(LIBTOOL) --mode=compile $(CC) -Iext/date/lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DHAVE_TIMELIB_CONFIG_H=1 -Iext/date/ -I/src/php-7.3.0/ext/date/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/date/php_date.c -o ext/date/php_date.lo 
+ext/date/lib/astro.lo: /src/php-7.3.0/ext/date/lib/astro.c
+	$(LIBTOOL) --mode=compile $(CC) -Iext/date/lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DHAVE_TIMELIB_CONFIG_H=1 -Iext/date/ -I/src/php-7.3.0/ext/date/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/date/lib/astro.c -o ext/date/lib/astro.lo 
+ext/date/lib/dow.lo: /src/php-7.3.0/ext/date/lib/dow.c
+	$(LIBTOOL) --mode=compile $(CC) -Iext/date/lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DHAVE_TIMELIB_CONFIG_H=1 -Iext/date/ -I/src/php-7.3.0/ext/date/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/date/lib/dow.c -o ext/date/lib/dow.lo 
+ext/date/lib/parse_date.lo: /src/php-7.3.0/ext/date/lib/parse_date.c
+	$(LIBTOOL) --mode=compile $(CC) -Iext/date/lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DHAVE_TIMELIB_CONFIG_H=1 -Iext/date/ -I/src/php-7.3.0/ext/date/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/date/lib/parse_date.c -o ext/date/lib/parse_date.lo 
+ext/date/lib/parse_tz.lo: /src/php-7.3.0/ext/date/lib/parse_tz.c
+	$(LIBTOOL) --mode=compile $(CC) -Iext/date/lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DHAVE_TIMELIB_CONFIG_H=1 -Iext/date/ -I/src/php-7.3.0/ext/date/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/date/lib/parse_tz.c -o ext/date/lib/parse_tz.lo 
+ext/date/lib/timelib.lo: /src/php-7.3.0/ext/date/lib/timelib.c
+	$(LIBTOOL) --mode=compile $(CC) -Iext/date/lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DHAVE_TIMELIB_CONFIG_H=1 -Iext/date/ -I/src/php-7.3.0/ext/date/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/date/lib/timelib.c -o ext/date/lib/timelib.lo 
+ext/date/lib/tm2unixtime.lo: /src/php-7.3.0/ext/date/lib/tm2unixtime.c
+	$(LIBTOOL) --mode=compile $(CC) -Iext/date/lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DHAVE_TIMELIB_CONFIG_H=1 -Iext/date/ -I/src/php-7.3.0/ext/date/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/date/lib/tm2unixtime.c -o ext/date/lib/tm2unixtime.lo 
+ext/date/lib/unixtime2tm.lo: /src/php-7.3.0/ext/date/lib/unixtime2tm.c
+	$(LIBTOOL) --mode=compile $(CC) -Iext/date/lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DHAVE_TIMELIB_CONFIG_H=1 -Iext/date/ -I/src/php-7.3.0/ext/date/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/date/lib/unixtime2tm.c -o ext/date/lib/unixtime2tm.lo 
+ext/date/lib/parse_iso_intervals.lo: /src/php-7.3.0/ext/date/lib/parse_iso_intervals.c
+	$(LIBTOOL) --mode=compile $(CC) -Iext/date/lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DHAVE_TIMELIB_CONFIG_H=1 -Iext/date/ -I/src/php-7.3.0/ext/date/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/date/lib/parse_iso_intervals.c -o ext/date/lib/parse_iso_intervals.lo 
+ext/date/lib/interval.lo: /src/php-7.3.0/ext/date/lib/interval.c
+	$(LIBTOOL) --mode=compile $(CC) -Iext/date/lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -DHAVE_TIMELIB_CONFIG_H=1 -Iext/date/ -I/src/php-7.3.0/ext/date/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/date/lib/interval.c -o ext/date/lib/interval.lo 
+ext/pcre/pcre2lib/pcre2_auto_possess.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_auto_possess.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_auto_possess.c -o ext/pcre/pcre2lib/pcre2_auto_possess.lo 
+ext/pcre/pcre2lib/pcre2_chartables.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_chartables.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_chartables.c -o ext/pcre/pcre2lib/pcre2_chartables.lo 
+ext/pcre/pcre2lib/pcre2_compile.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_compile.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_compile.c -o ext/pcre/pcre2lib/pcre2_compile.lo 
+ext/pcre/pcre2lib/pcre2_config.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_config.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_config.c -o ext/pcre/pcre2lib/pcre2_config.lo 
+ext/pcre/pcre2lib/pcre2_context.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_context.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_context.c -o ext/pcre/pcre2lib/pcre2_context.lo 
+ext/pcre/pcre2lib/pcre2_dfa_match.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_dfa_match.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_dfa_match.c -o ext/pcre/pcre2lib/pcre2_dfa_match.lo 
+ext/pcre/pcre2lib/pcre2_error.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_error.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_error.c -o ext/pcre/pcre2lib/pcre2_error.lo 
+ext/pcre/pcre2lib/pcre2_jit_compile.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_jit_compile.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_jit_compile.c -o ext/pcre/pcre2lib/pcre2_jit_compile.lo 
+ext/pcre/pcre2lib/pcre2_maketables.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_maketables.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_maketables.c -o ext/pcre/pcre2lib/pcre2_maketables.lo 
+ext/pcre/pcre2lib/pcre2_match.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_match.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_match.c -o ext/pcre/pcre2lib/pcre2_match.lo 
+ext/pcre/pcre2lib/pcre2_match_data.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_match_data.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_match_data.c -o ext/pcre/pcre2lib/pcre2_match_data.lo 
+ext/pcre/pcre2lib/pcre2_newline.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_newline.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_newline.c -o ext/pcre/pcre2lib/pcre2_newline.lo 
+ext/pcre/pcre2lib/pcre2_ord2utf.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_ord2utf.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_ord2utf.c -o ext/pcre/pcre2lib/pcre2_ord2utf.lo 
+ext/pcre/pcre2lib/pcre2_pattern_info.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_pattern_info.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_pattern_info.c -o ext/pcre/pcre2lib/pcre2_pattern_info.lo 
+ext/pcre/pcre2lib/pcre2_serialize.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_serialize.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_serialize.c -o ext/pcre/pcre2lib/pcre2_serialize.lo 
+ext/pcre/pcre2lib/pcre2_string_utils.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_string_utils.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_string_utils.c -o ext/pcre/pcre2lib/pcre2_string_utils.lo 
+ext/pcre/pcre2lib/pcre2_study.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_study.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_study.c -o ext/pcre/pcre2lib/pcre2_study.lo 
+ext/pcre/pcre2lib/pcre2_substitute.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_substitute.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_substitute.c -o ext/pcre/pcre2lib/pcre2_substitute.lo 
+ext/pcre/pcre2lib/pcre2_substring.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_substring.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_substring.c -o ext/pcre/pcre2lib/pcre2_substring.lo 
+ext/pcre/pcre2lib/pcre2_tables.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_tables.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_tables.c -o ext/pcre/pcre2lib/pcre2_tables.lo 
+ext/pcre/pcre2lib/pcre2_ucd.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_ucd.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_ucd.c -o ext/pcre/pcre2lib/pcre2_ucd.lo 
+ext/pcre/pcre2lib/pcre2_valid_utf.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_valid_utf.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_valid_utf.c -o ext/pcre/pcre2lib/pcre2_valid_utf.lo 
+ext/pcre/pcre2lib/pcre2_xclass.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_xclass.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_xclass.c -o ext/pcre/pcre2lib/pcre2_xclass.lo 
+ext/pcre/pcre2lib/pcre2_find_bracket.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_find_bracket.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_find_bracket.c -o ext/pcre/pcre2lib/pcre2_find_bracket.lo 
+ext/pcre/pcre2lib/pcre2_convert.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_convert.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_convert.c -o ext/pcre/pcre2lib/pcre2_convert.lo 
+ext/pcre/pcre2lib/pcre2_extuni.lo: /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_extuni.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/pcre2lib/pcre2_extuni.c -o ext/pcre/pcre2lib/pcre2_extuni.lo 
+ext/pcre/php_pcre.lo: /src/php-7.3.0/ext/pcre/php_pcre.c
+	$(LIBTOOL) --mode=compile $(CC) -DHAVE_CONFIG_H -I/src/php-7.3.0/ext/pcre/pcre2lib -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/pcre/ -I/src/php-7.3.0/ext/pcre/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/pcre/php_pcre.c -o ext/pcre/php_pcre.lo 
+ext/bcmath/bcmath.lo: /src/php-7.3.0/ext/bcmath/bcmath.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/bcmath.c -o ext/bcmath/bcmath.lo 
+ext/bcmath/libbcmath/src/add.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/add.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/add.c -o ext/bcmath/libbcmath/src/add.lo 
+ext/bcmath/libbcmath/src/div.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/div.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/div.c -o ext/bcmath/libbcmath/src/div.lo 
+ext/bcmath/libbcmath/src/init.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/init.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/init.c -o ext/bcmath/libbcmath/src/init.lo 
+ext/bcmath/libbcmath/src/neg.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/neg.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/neg.c -o ext/bcmath/libbcmath/src/neg.lo 
+ext/bcmath/libbcmath/src/outofmem.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/outofmem.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/outofmem.c -o ext/bcmath/libbcmath/src/outofmem.lo 
+ext/bcmath/libbcmath/src/raisemod.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/raisemod.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/raisemod.c -o ext/bcmath/libbcmath/src/raisemod.lo 
+ext/bcmath/libbcmath/src/sub.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/sub.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/sub.c -o ext/bcmath/libbcmath/src/sub.lo 
+ext/bcmath/libbcmath/src/compare.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/compare.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/compare.c -o ext/bcmath/libbcmath/src/compare.lo 
+ext/bcmath/libbcmath/src/divmod.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/divmod.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/divmod.c -o ext/bcmath/libbcmath/src/divmod.lo 
+ext/bcmath/libbcmath/src/int2num.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/int2num.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/int2num.c -o ext/bcmath/libbcmath/src/int2num.lo 
+ext/bcmath/libbcmath/src/num2long.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/num2long.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/num2long.c -o ext/bcmath/libbcmath/src/num2long.lo 
+ext/bcmath/libbcmath/src/output.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/output.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/output.c -o ext/bcmath/libbcmath/src/output.lo 
+ext/bcmath/libbcmath/src/recmul.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/recmul.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/recmul.c -o ext/bcmath/libbcmath/src/recmul.lo 
+ext/bcmath/libbcmath/src/sqrt.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/sqrt.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/sqrt.c -o ext/bcmath/libbcmath/src/sqrt.lo 
+ext/bcmath/libbcmath/src/zero.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/zero.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/zero.c -o ext/bcmath/libbcmath/src/zero.lo 
+ext/bcmath/libbcmath/src/debug.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/debug.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/debug.c -o ext/bcmath/libbcmath/src/debug.lo 
+ext/bcmath/libbcmath/src/doaddsub.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/doaddsub.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/doaddsub.c -o ext/bcmath/libbcmath/src/doaddsub.lo 
+ext/bcmath/libbcmath/src/nearzero.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/nearzero.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/nearzero.c -o ext/bcmath/libbcmath/src/nearzero.lo 
+ext/bcmath/libbcmath/src/num2str.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/num2str.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/num2str.c -o ext/bcmath/libbcmath/src/num2str.lo 
+ext/bcmath/libbcmath/src/raise.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/raise.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/raise.c -o ext/bcmath/libbcmath/src/raise.lo 
+ext/bcmath/libbcmath/src/rmzero.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/rmzero.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/rmzero.c -o ext/bcmath/libbcmath/src/rmzero.lo 
+ext/bcmath/libbcmath/src/str2num.lo: /src/php-7.3.0/ext/bcmath/libbcmath/src/str2num.c
+	$(LIBTOOL) --mode=compile $(CC) -I/src/php-7.3.0/ext/bcmath/libbcmath/src -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/bcmath/ -I/src/php-7.3.0/ext/bcmath/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/bcmath/libbcmath/src/str2num.c -o ext/bcmath/libbcmath/src/str2num.lo 
+ext/ctype/ctype.lo: /src/php-7.3.0/ext/ctype/ctype.c
+	$(LIBTOOL) --mode=compile $(CC)  -Iext/ctype/ -I/src/php-7.3.0/ext/ctype/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/ctype/ctype.c -o ext/ctype/ctype.lo 
+ext/json/json.lo: /src/php-7.3.0/ext/json/json.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/json/ -I/src/php-7.3.0/ext/json/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/json/json.c -o ext/json/json.lo 
+ext/json/json_encoder.lo: /src/php-7.3.0/ext/json/json_encoder.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/json/ -I/src/php-7.3.0/ext/json/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/json/json_encoder.c -o ext/json/json_encoder.lo 
+ext/json/json_parser.lo: /src/php-7.3.0/ext/json/json_parser.tab.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/json/ -I/src/php-7.3.0/ext/json/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/json/json_parser.tab.c -o ext/json/json_parser.lo 
+ext/json/json_scanner.lo: /src/php-7.3.0/ext/json/json_scanner.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/json/ -I/src/php-7.3.0/ext/json/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/json/json_scanner.c -o ext/json/json_scanner.lo 
+ext/mbstring/libmbfl/filters/html_entities.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/html_entities.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/html_entities.c -o ext/mbstring/libmbfl/filters/html_entities.lo 
+ext/mbstring/libmbfl/filters/mbfilter_7bit.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_7bit.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_7bit.c -o ext/mbstring/libmbfl/filters/mbfilter_7bit.lo 
+ext/mbstring/libmbfl/filters/mbfilter_ascii.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_ascii.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_ascii.c -o ext/mbstring/libmbfl/filters/mbfilter_ascii.lo 
+ext/mbstring/libmbfl/filters/mbfilter_base64.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_base64.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_base64.c -o ext/mbstring/libmbfl/filters/mbfilter_base64.lo 
+ext/mbstring/libmbfl/filters/mbfilter_big5.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_big5.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_big5.c -o ext/mbstring/libmbfl/filters/mbfilter_big5.lo 
+ext/mbstring/libmbfl/filters/mbfilter_byte2.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_byte2.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_byte2.c -o ext/mbstring/libmbfl/filters/mbfilter_byte2.lo 
+ext/mbstring/libmbfl/filters/mbfilter_byte4.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_byte4.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_byte4.c -o ext/mbstring/libmbfl/filters/mbfilter_byte4.lo 
+ext/mbstring/libmbfl/filters/mbfilter_cp1251.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_cp1251.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_cp1251.c -o ext/mbstring/libmbfl/filters/mbfilter_cp1251.lo 
+ext/mbstring/libmbfl/filters/mbfilter_cp1252.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_cp1252.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_cp1252.c -o ext/mbstring/libmbfl/filters/mbfilter_cp1252.lo 
+ext/mbstring/libmbfl/filters/mbfilter_cp1254.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_cp1254.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_cp1254.c -o ext/mbstring/libmbfl/filters/mbfilter_cp1254.lo 
+ext/mbstring/libmbfl/filters/mbfilter_cp5022x.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_cp5022x.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_cp5022x.c -o ext/mbstring/libmbfl/filters/mbfilter_cp5022x.lo 
+ext/mbstring/libmbfl/filters/mbfilter_cp51932.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_cp51932.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_cp51932.c -o ext/mbstring/libmbfl/filters/mbfilter_cp51932.lo 
+ext/mbstring/libmbfl/filters/mbfilter_cp850.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_cp850.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_cp850.c -o ext/mbstring/libmbfl/filters/mbfilter_cp850.lo 
+ext/mbstring/libmbfl/filters/mbfilter_cp866.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_cp866.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_cp866.c -o ext/mbstring/libmbfl/filters/mbfilter_cp866.lo 
+ext/mbstring/libmbfl/filters/mbfilter_cp932.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_cp932.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_cp932.c -o ext/mbstring/libmbfl/filters/mbfilter_cp932.lo 
+ext/mbstring/libmbfl/filters/mbfilter_cp936.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_cp936.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_cp936.c -o ext/mbstring/libmbfl/filters/mbfilter_cp936.lo 
+ext/mbstring/libmbfl/filters/mbfilter_gb18030.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_gb18030.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_gb18030.c -o ext/mbstring/libmbfl/filters/mbfilter_gb18030.lo 
+ext/mbstring/libmbfl/filters/mbfilter_euc_cn.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_euc_cn.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_euc_cn.c -o ext/mbstring/libmbfl/filters/mbfilter_euc_cn.lo 
+ext/mbstring/libmbfl/filters/mbfilter_euc_jp.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_euc_jp.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_euc_jp.c -o ext/mbstring/libmbfl/filters/mbfilter_euc_jp.lo 
+ext/mbstring/libmbfl/filters/mbfilter_euc_jp_2004.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_euc_jp_2004.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_euc_jp_2004.c -o ext/mbstring/libmbfl/filters/mbfilter_euc_jp_2004.lo 
+ext/mbstring/libmbfl/filters/mbfilter_euc_jp_win.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_euc_jp_win.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_euc_jp_win.c -o ext/mbstring/libmbfl/filters/mbfilter_euc_jp_win.lo 
+ext/mbstring/libmbfl/filters/mbfilter_euc_kr.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_euc_kr.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_euc_kr.c -o ext/mbstring/libmbfl/filters/mbfilter_euc_kr.lo 
+ext/mbstring/libmbfl/filters/mbfilter_euc_tw.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_euc_tw.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_euc_tw.c -o ext/mbstring/libmbfl/filters/mbfilter_euc_tw.lo 
+ext/mbstring/libmbfl/filters/mbfilter_htmlent.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_htmlent.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_htmlent.c -o ext/mbstring/libmbfl/filters/mbfilter_htmlent.lo 
+ext/mbstring/libmbfl/filters/mbfilter_hz.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_hz.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_hz.c -o ext/mbstring/libmbfl/filters/mbfilter_hz.lo 
+ext/mbstring/libmbfl/filters/mbfilter_iso2022_jp_ms.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso2022_jp_ms.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso2022_jp_ms.c -o ext/mbstring/libmbfl/filters/mbfilter_iso2022_jp_ms.lo 
+ext/mbstring/libmbfl/filters/mbfilter_iso2022jp_2004.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso2022jp_2004.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso2022jp_2004.c -o ext/mbstring/libmbfl/filters/mbfilter_iso2022jp_2004.lo 
+ext/mbstring/libmbfl/filters/mbfilter_iso2022jp_mobile.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso2022jp_mobile.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso2022jp_mobile.c -o ext/mbstring/libmbfl/filters/mbfilter_iso2022jp_mobile.lo 
+ext/mbstring/libmbfl/filters/mbfilter_iso2022_kr.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso2022_kr.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso2022_kr.c -o ext/mbstring/libmbfl/filters/mbfilter_iso2022_kr.lo 
+ext/mbstring/libmbfl/filters/mbfilter_iso8859_1.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_1.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_1.c -o ext/mbstring/libmbfl/filters/mbfilter_iso8859_1.lo 
+ext/mbstring/libmbfl/filters/mbfilter_iso8859_10.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_10.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_10.c -o ext/mbstring/libmbfl/filters/mbfilter_iso8859_10.lo 
+ext/mbstring/libmbfl/filters/mbfilter_iso8859_13.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_13.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_13.c -o ext/mbstring/libmbfl/filters/mbfilter_iso8859_13.lo 
+ext/mbstring/libmbfl/filters/mbfilter_iso8859_14.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_14.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_14.c -o ext/mbstring/libmbfl/filters/mbfilter_iso8859_14.lo 
+ext/mbstring/libmbfl/filters/mbfilter_iso8859_15.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_15.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_15.c -o ext/mbstring/libmbfl/filters/mbfilter_iso8859_15.lo 
+ext/mbstring/libmbfl/filters/mbfilter_iso8859_16.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_16.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_16.c -o ext/mbstring/libmbfl/filters/mbfilter_iso8859_16.lo 
+ext/mbstring/libmbfl/filters/mbfilter_iso8859_2.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_2.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_2.c -o ext/mbstring/libmbfl/filters/mbfilter_iso8859_2.lo 
+ext/mbstring/libmbfl/filters/mbfilter_iso8859_3.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_3.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_3.c -o ext/mbstring/libmbfl/filters/mbfilter_iso8859_3.lo 
+ext/mbstring/libmbfl/filters/mbfilter_iso8859_4.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_4.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_4.c -o ext/mbstring/libmbfl/filters/mbfilter_iso8859_4.lo 
+ext/mbstring/libmbfl/filters/mbfilter_iso8859_5.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_5.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_5.c -o ext/mbstring/libmbfl/filters/mbfilter_iso8859_5.lo 
+ext/mbstring/libmbfl/filters/mbfilter_iso8859_6.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_6.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_6.c -o ext/mbstring/libmbfl/filters/mbfilter_iso8859_6.lo 
+ext/mbstring/libmbfl/filters/mbfilter_iso8859_7.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_7.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_7.c -o ext/mbstring/libmbfl/filters/mbfilter_iso8859_7.lo 
+ext/mbstring/libmbfl/filters/mbfilter_iso8859_8.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_8.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_8.c -o ext/mbstring/libmbfl/filters/mbfilter_iso8859_8.lo 
+ext/mbstring/libmbfl/filters/mbfilter_iso8859_9.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_9.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_iso8859_9.c -o ext/mbstring/libmbfl/filters/mbfilter_iso8859_9.lo 
+ext/mbstring/libmbfl/filters/mbfilter_jis.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_jis.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_jis.c -o ext/mbstring/libmbfl/filters/mbfilter_jis.lo 
+ext/mbstring/libmbfl/filters/mbfilter_koi8r.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_koi8r.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_koi8r.c -o ext/mbstring/libmbfl/filters/mbfilter_koi8r.lo 
+ext/mbstring/libmbfl/filters/mbfilter_armscii8.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_armscii8.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_armscii8.c -o ext/mbstring/libmbfl/filters/mbfilter_armscii8.lo 
+ext/mbstring/libmbfl/filters/mbfilter_qprint.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_qprint.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_qprint.c -o ext/mbstring/libmbfl/filters/mbfilter_qprint.lo 
+ext/mbstring/libmbfl/filters/mbfilter_sjis.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_sjis.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_sjis.c -o ext/mbstring/libmbfl/filters/mbfilter_sjis.lo 
+ext/mbstring/libmbfl/filters/mbfilter_sjis_open.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_sjis_open.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_sjis_open.c -o ext/mbstring/libmbfl/filters/mbfilter_sjis_open.lo 
+ext/mbstring/libmbfl/filters/mbfilter_sjis_mobile.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_sjis_mobile.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_sjis_mobile.c -o ext/mbstring/libmbfl/filters/mbfilter_sjis_mobile.lo 
+ext/mbstring/libmbfl/filters/mbfilter_sjis_mac.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_sjis_mac.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_sjis_mac.c -o ext/mbstring/libmbfl/filters/mbfilter_sjis_mac.lo 
+ext/mbstring/libmbfl/filters/mbfilter_sjis_2004.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_sjis_2004.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_sjis_2004.c -o ext/mbstring/libmbfl/filters/mbfilter_sjis_2004.lo 
+ext/mbstring/libmbfl/filters/mbfilter_tl_jisx0201_jisx0208.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_tl_jisx0201_jisx0208.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_tl_jisx0201_jisx0208.c -o ext/mbstring/libmbfl/filters/mbfilter_tl_jisx0201_jisx0208.lo 
+ext/mbstring/libmbfl/filters/mbfilter_ucs2.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_ucs2.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_ucs2.c -o ext/mbstring/libmbfl/filters/mbfilter_ucs2.lo 
+ext/mbstring/libmbfl/filters/mbfilter_ucs4.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_ucs4.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_ucs4.c -o ext/mbstring/libmbfl/filters/mbfilter_ucs4.lo 
+ext/mbstring/libmbfl/filters/mbfilter_uhc.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_uhc.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_uhc.c -o ext/mbstring/libmbfl/filters/mbfilter_uhc.lo 
+ext/mbstring/libmbfl/filters/mbfilter_utf16.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_utf16.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_utf16.c -o ext/mbstring/libmbfl/filters/mbfilter_utf16.lo 
+ext/mbstring/libmbfl/filters/mbfilter_utf32.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_utf32.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_utf32.c -o ext/mbstring/libmbfl/filters/mbfilter_utf32.lo 
+ext/mbstring/libmbfl/filters/mbfilter_utf7.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_utf7.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_utf7.c -o ext/mbstring/libmbfl/filters/mbfilter_utf7.lo 
+ext/mbstring/libmbfl/filters/mbfilter_utf7imap.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_utf7imap.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_utf7imap.c -o ext/mbstring/libmbfl/filters/mbfilter_utf7imap.lo 
+ext/mbstring/libmbfl/filters/mbfilter_utf8.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_utf8.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_utf8.c -o ext/mbstring/libmbfl/filters/mbfilter_utf8.lo 
+ext/mbstring/libmbfl/filters/mbfilter_utf8_mobile.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_utf8_mobile.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_utf8_mobile.c -o ext/mbstring/libmbfl/filters/mbfilter_utf8_mobile.lo 
+ext/mbstring/libmbfl/filters/mbfilter_uuencode.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_uuencode.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_uuencode.c -o ext/mbstring/libmbfl/filters/mbfilter_uuencode.lo 
+ext/mbstring/libmbfl/filters/mbfilter_koi8u.lo: /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_koi8u.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/filters/mbfilter_koi8u.c -o ext/mbstring/libmbfl/filters/mbfilter_koi8u.lo 
+ext/mbstring/libmbfl/mbfl/mbfilter.lo: /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfilter.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfilter.c -o ext/mbstring/libmbfl/mbfl/mbfilter.lo 
+ext/mbstring/libmbfl/mbfl/mbfilter_8bit.lo: /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfilter_8bit.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfilter_8bit.c -o ext/mbstring/libmbfl/mbfl/mbfilter_8bit.lo 
+ext/mbstring/libmbfl/mbfl/mbfilter_pass.lo: /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfilter_pass.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfilter_pass.c -o ext/mbstring/libmbfl/mbfl/mbfilter_pass.lo 
+ext/mbstring/libmbfl/mbfl/mbfilter_wchar.lo: /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfilter_wchar.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfilter_wchar.c -o ext/mbstring/libmbfl/mbfl/mbfilter_wchar.lo 
+ext/mbstring/libmbfl/mbfl/mbfl_convert.lo: /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfl_convert.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfl_convert.c -o ext/mbstring/libmbfl/mbfl/mbfl_convert.lo 
+ext/mbstring/libmbfl/mbfl/mbfl_encoding.lo: /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfl_encoding.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfl_encoding.c -o ext/mbstring/libmbfl/mbfl/mbfl_encoding.lo 
+ext/mbstring/libmbfl/mbfl/mbfl_filter_output.lo: /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfl_filter_output.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfl_filter_output.c -o ext/mbstring/libmbfl/mbfl/mbfl_filter_output.lo 
+ext/mbstring/libmbfl/mbfl/mbfl_ident.lo: /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfl_ident.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfl_ident.c -o ext/mbstring/libmbfl/mbfl/mbfl_ident.lo 
+ext/mbstring/libmbfl/mbfl/mbfl_language.lo: /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfl_language.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfl_language.c -o ext/mbstring/libmbfl/mbfl/mbfl_language.lo 
+ext/mbstring/libmbfl/mbfl/mbfl_memory_device.lo: /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfl_memory_device.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfl_memory_device.c -o ext/mbstring/libmbfl/mbfl/mbfl_memory_device.lo 
+ext/mbstring/libmbfl/mbfl/mbfl_string.lo: /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfl_string.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfl_string.c -o ext/mbstring/libmbfl/mbfl/mbfl_string.lo 
+ext/mbstring/libmbfl/mbfl/mbfl_allocators.lo: /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfl_allocators.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/mbfl/mbfl_allocators.c -o ext/mbstring/libmbfl/mbfl/mbfl_allocators.lo 
+ext/mbstring/libmbfl/nls/nls_de.lo: /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_de.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_de.c -o ext/mbstring/libmbfl/nls/nls_de.lo 
+ext/mbstring/libmbfl/nls/nls_en.lo: /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_en.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_en.c -o ext/mbstring/libmbfl/nls/nls_en.lo 
+ext/mbstring/libmbfl/nls/nls_ja.lo: /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_ja.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_ja.c -o ext/mbstring/libmbfl/nls/nls_ja.lo 
+ext/mbstring/libmbfl/nls/nls_kr.lo: /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_kr.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_kr.c -o ext/mbstring/libmbfl/nls/nls_kr.lo 
+ext/mbstring/libmbfl/nls/nls_neutral.lo: /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_neutral.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_neutral.c -o ext/mbstring/libmbfl/nls/nls_neutral.lo 
+ext/mbstring/libmbfl/nls/nls_ru.lo: /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_ru.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_ru.c -o ext/mbstring/libmbfl/nls/nls_ru.lo 
+ext/mbstring/libmbfl/nls/nls_uni.lo: /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_uni.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_uni.c -o ext/mbstring/libmbfl/nls/nls_uni.lo 
+ext/mbstring/libmbfl/nls/nls_zh.lo: /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_zh.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_zh.c -o ext/mbstring/libmbfl/nls/nls_zh.lo 
+ext/mbstring/libmbfl/nls/nls_hy.lo: /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_hy.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_hy.c -o ext/mbstring/libmbfl/nls/nls_hy.lo 
+ext/mbstring/libmbfl/nls/nls_tr.lo: /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_tr.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_tr.c -o ext/mbstring/libmbfl/nls/nls_tr.lo 
+ext/mbstring/libmbfl/nls/nls_ua.lo: /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_ua.c
+	$(LIBTOOL) --mode=compile $(CC)  -DHAVE_CONFIG_H -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/libmbfl/nls/nls_ua.c -o ext/mbstring/libmbfl/nls/nls_ua.lo 
+ext/mbstring/mbstring.lo: /src/php-7.3.0/ext/mbstring/mbstring.c
+	$(LIBTOOL) --mode=compile $(CC)  -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/mbstring.c -o ext/mbstring/mbstring.lo 
+ext/mbstring/php_unicode.lo: /src/php-7.3.0/ext/mbstring/php_unicode.c
+	$(LIBTOOL) --mode=compile $(CC)  -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/php_unicode.c -o ext/mbstring/php_unicode.lo 
+ext/mbstring/mb_gpc.lo: /src/php-7.3.0/ext/mbstring/mb_gpc.c
+	$(LIBTOOL) --mode=compile $(CC)  -Iext/mbstring/ -I/src/php-7.3.0/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/mbstring/mb_gpc.c -o ext/mbstring/mb_gpc.lo 
+ext/reflection/php_reflection.lo: /src/php-7.3.0/ext/reflection/php_reflection.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/reflection/ -I/src/php-7.3.0/ext/reflection/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/reflection/php_reflection.c -o ext/reflection/php_reflection.lo 
+ext/spl/php_spl.lo: /src/php-7.3.0/ext/spl/php_spl.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/spl/ -I/src/php-7.3.0/ext/spl/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/spl/php_spl.c -o ext/spl/php_spl.lo 
+ext/spl/spl_functions.lo: /src/php-7.3.0/ext/spl/spl_functions.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/spl/ -I/src/php-7.3.0/ext/spl/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/spl/spl_functions.c -o ext/spl/spl_functions.lo 
+ext/spl/spl_engine.lo: /src/php-7.3.0/ext/spl/spl_engine.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/spl/ -I/src/php-7.3.0/ext/spl/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/spl/spl_engine.c -o ext/spl/spl_engine.lo 
+ext/spl/spl_iterators.lo: /src/php-7.3.0/ext/spl/spl_iterators.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/spl/ -I/src/php-7.3.0/ext/spl/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/spl/spl_iterators.c -o ext/spl/spl_iterators.lo 
+ext/spl/spl_array.lo: /src/php-7.3.0/ext/spl/spl_array.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/spl/ -I/src/php-7.3.0/ext/spl/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/spl/spl_array.c -o ext/spl/spl_array.lo 
+ext/spl/spl_directory.lo: /src/php-7.3.0/ext/spl/spl_directory.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/spl/ -I/src/php-7.3.0/ext/spl/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/spl/spl_directory.c -o ext/spl/spl_directory.lo 
+ext/spl/spl_exceptions.lo: /src/php-7.3.0/ext/spl/spl_exceptions.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/spl/ -I/src/php-7.3.0/ext/spl/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/spl/spl_exceptions.c -o ext/spl/spl_exceptions.lo 
+ext/spl/spl_observer.lo: /src/php-7.3.0/ext/spl/spl_observer.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/spl/ -I/src/php-7.3.0/ext/spl/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/spl/spl_observer.c -o ext/spl/spl_observer.lo 
+ext/spl/spl_dllist.lo: /src/php-7.3.0/ext/spl/spl_dllist.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/spl/ -I/src/php-7.3.0/ext/spl/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/spl/spl_dllist.c -o ext/spl/spl_dllist.lo 
+ext/spl/spl_heap.lo: /src/php-7.3.0/ext/spl/spl_heap.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/spl/ -I/src/php-7.3.0/ext/spl/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/spl/spl_heap.c -o ext/spl/spl_heap.lo 
+ext/spl/spl_fixedarray.lo: /src/php-7.3.0/ext/spl/spl_fixedarray.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/spl/ -I/src/php-7.3.0/ext/spl/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/spl/spl_fixedarray.c -o ext/spl/spl_fixedarray.lo 
+ext/standard/crypt_freesec.lo: /src/php-7.3.0/ext/standard/crypt_freesec.c
+	$(LIBTOOL) --mode=compile $(CC)  -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/crypt_freesec.c -o ext/standard/crypt_freesec.lo 
+ext/standard/crypt_blowfish.lo: /src/php-7.3.0/ext/standard/crypt_blowfish.c
+	$(LIBTOOL) --mode=compile $(CC)  -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/crypt_blowfish.c -o ext/standard/crypt_blowfish.lo 
+ext/standard/crypt_sha512.lo: /src/php-7.3.0/ext/standard/crypt_sha512.c
+	$(LIBTOOL) --mode=compile $(CC)  -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/crypt_sha512.c -o ext/standard/crypt_sha512.lo 
+ext/standard/crypt_sha256.lo: /src/php-7.3.0/ext/standard/crypt_sha256.c
+	$(LIBTOOL) --mode=compile $(CC)  -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/crypt_sha256.c -o ext/standard/crypt_sha256.lo 
+ext/standard/php_crypt_r.lo: /src/php-7.3.0/ext/standard/php_crypt_r.c
+	$(LIBTOOL) --mode=compile $(CC)  -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/php_crypt_r.c -o ext/standard/php_crypt_r.lo 
+ext/standard/array.lo: /src/php-7.3.0/ext/standard/array.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/array.c -o ext/standard/array.lo 
+ext/standard/base64.lo: /src/php-7.3.0/ext/standard/base64.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/base64.c -o ext/standard/base64.lo 
+ext/standard/basic_functions.lo: /src/php-7.3.0/ext/standard/basic_functions.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/basic_functions.c -o ext/standard/basic_functions.lo 
+ext/standard/browscap.lo: /src/php-7.3.0/ext/standard/browscap.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/browscap.c -o ext/standard/browscap.lo 
+ext/standard/crc32.lo: /src/php-7.3.0/ext/standard/crc32.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/crc32.c -o ext/standard/crc32.lo 
+ext/standard/crypt.lo: /src/php-7.3.0/ext/standard/crypt.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/crypt.c -o ext/standard/crypt.lo 
+ext/standard/cyr_convert.lo: /src/php-7.3.0/ext/standard/cyr_convert.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/cyr_convert.c -o ext/standard/cyr_convert.lo 
+ext/standard/datetime.lo: /src/php-7.3.0/ext/standard/datetime.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/datetime.c -o ext/standard/datetime.lo 
+ext/standard/dir.lo: /src/php-7.3.0/ext/standard/dir.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/dir.c -o ext/standard/dir.lo 
+ext/standard/dl.lo: /src/php-7.3.0/ext/standard/dl.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/dl.c -o ext/standard/dl.lo 
+ext/standard/dns.lo: /src/php-7.3.0/ext/standard/dns.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/dns.c -o ext/standard/dns.lo 
+ext/standard/exec.lo: /src/php-7.3.0/ext/standard/exec.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/exec.c -o ext/standard/exec.lo 
+ext/standard/file.lo: /src/php-7.3.0/ext/standard/file.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/file.c -o ext/standard/file.lo 
+ext/standard/filestat.lo: /src/php-7.3.0/ext/standard/filestat.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/filestat.c -o ext/standard/filestat.lo 
+ext/standard/flock_compat.lo: /src/php-7.3.0/ext/standard/flock_compat.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/flock_compat.c -o ext/standard/flock_compat.lo 
+ext/standard/formatted_print.lo: /src/php-7.3.0/ext/standard/formatted_print.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/formatted_print.c -o ext/standard/formatted_print.lo 
+ext/standard/fsock.lo: /src/php-7.3.0/ext/standard/fsock.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/fsock.c -o ext/standard/fsock.lo 
+ext/standard/head.lo: /src/php-7.3.0/ext/standard/head.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/head.c -o ext/standard/head.lo 
+ext/standard/html.lo: /src/php-7.3.0/ext/standard/html.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/html.c -o ext/standard/html.lo 
+ext/standard/image.lo: /src/php-7.3.0/ext/standard/image.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/image.c -o ext/standard/image.lo 
+ext/standard/info.lo: /src/php-7.3.0/ext/standard/info.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/info.c -o ext/standard/info.lo 
+ext/standard/iptc.lo: /src/php-7.3.0/ext/standard/iptc.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/iptc.c -o ext/standard/iptc.lo 
+ext/standard/lcg.lo: /src/php-7.3.0/ext/standard/lcg.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/lcg.c -o ext/standard/lcg.lo 
+ext/standard/link.lo: /src/php-7.3.0/ext/standard/link.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/link.c -o ext/standard/link.lo 
+ext/standard/mail.lo: /src/php-7.3.0/ext/standard/mail.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/mail.c -o ext/standard/mail.lo 
+ext/standard/math.lo: /src/php-7.3.0/ext/standard/math.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/math.c -o ext/standard/math.lo 
+ext/standard/md5.lo: /src/php-7.3.0/ext/standard/md5.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/md5.c -o ext/standard/md5.lo 
+ext/standard/metaphone.lo: /src/php-7.3.0/ext/standard/metaphone.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/metaphone.c -o ext/standard/metaphone.lo 
+ext/standard/microtime.lo: /src/php-7.3.0/ext/standard/microtime.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/microtime.c -o ext/standard/microtime.lo 
+ext/standard/pack.lo: /src/php-7.3.0/ext/standard/pack.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/pack.c -o ext/standard/pack.lo 
+ext/standard/pageinfo.lo: /src/php-7.3.0/ext/standard/pageinfo.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/pageinfo.c -o ext/standard/pageinfo.lo 
+ext/standard/quot_print.lo: /src/php-7.3.0/ext/standard/quot_print.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/quot_print.c -o ext/standard/quot_print.lo 
+ext/standard/rand.lo: /src/php-7.3.0/ext/standard/rand.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/rand.c -o ext/standard/rand.lo 
+ext/standard/mt_rand.lo: /src/php-7.3.0/ext/standard/mt_rand.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/mt_rand.c -o ext/standard/mt_rand.lo 
+ext/standard/soundex.lo: /src/php-7.3.0/ext/standard/soundex.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/soundex.c -o ext/standard/soundex.lo 
+ext/standard/string.lo: /src/php-7.3.0/ext/standard/string.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/string.c -o ext/standard/string.lo 
+ext/standard/scanf.lo: /src/php-7.3.0/ext/standard/scanf.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/scanf.c -o ext/standard/scanf.lo 
+ext/standard/syslog.lo: /src/php-7.3.0/ext/standard/syslog.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/syslog.c -o ext/standard/syslog.lo 
+ext/standard/type.lo: /src/php-7.3.0/ext/standard/type.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/type.c -o ext/standard/type.lo 
+ext/standard/uniqid.lo: /src/php-7.3.0/ext/standard/uniqid.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/uniqid.c -o ext/standard/uniqid.lo 
+ext/standard/url.lo: /src/php-7.3.0/ext/standard/url.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/url.c -o ext/standard/url.lo 
+ext/standard/var.lo: /src/php-7.3.0/ext/standard/var.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/var.c -o ext/standard/var.lo 
+ext/standard/versioning.lo: /src/php-7.3.0/ext/standard/versioning.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/versioning.c -o ext/standard/versioning.lo 
+ext/standard/assert.lo: /src/php-7.3.0/ext/standard/assert.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/assert.c -o ext/standard/assert.lo 
+ext/standard/strnatcmp.lo: /src/php-7.3.0/ext/standard/strnatcmp.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/strnatcmp.c -o ext/standard/strnatcmp.lo 
+ext/standard/levenshtein.lo: /src/php-7.3.0/ext/standard/levenshtein.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/levenshtein.c -o ext/standard/levenshtein.lo 
+ext/standard/incomplete_class.lo: /src/php-7.3.0/ext/standard/incomplete_class.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/incomplete_class.c -o ext/standard/incomplete_class.lo 
+ext/standard/url_scanner_ex.lo: /src/php-7.3.0/ext/standard/url_scanner_ex.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/url_scanner_ex.c -o ext/standard/url_scanner_ex.lo 
+ext/standard/ftp_fopen_wrapper.lo: /src/php-7.3.0/ext/standard/ftp_fopen_wrapper.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/ftp_fopen_wrapper.c -o ext/standard/ftp_fopen_wrapper.lo 
+ext/standard/http_fopen_wrapper.lo: /src/php-7.3.0/ext/standard/http_fopen_wrapper.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/http_fopen_wrapper.c -o ext/standard/http_fopen_wrapper.lo 
+ext/standard/php_fopen_wrapper.lo: /src/php-7.3.0/ext/standard/php_fopen_wrapper.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/php_fopen_wrapper.c -o ext/standard/php_fopen_wrapper.lo 
+ext/standard/credits.lo: /src/php-7.3.0/ext/standard/credits.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/credits.c -o ext/standard/credits.lo 
+ext/standard/css.lo: /src/php-7.3.0/ext/standard/css.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/css.c -o ext/standard/css.lo 
+ext/standard/var_unserializer.lo: /src/php-7.3.0/ext/standard/var_unserializer.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/var_unserializer.c -o ext/standard/var_unserializer.lo 
+ext/standard/ftok.lo: /src/php-7.3.0/ext/standard/ftok.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/ftok.c -o ext/standard/ftok.lo 
+ext/standard/sha1.lo: /src/php-7.3.0/ext/standard/sha1.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/sha1.c -o ext/standard/sha1.lo 
+ext/standard/user_filters.lo: /src/php-7.3.0/ext/standard/user_filters.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/user_filters.c -o ext/standard/user_filters.lo 
+ext/standard/uuencode.lo: /src/php-7.3.0/ext/standard/uuencode.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/uuencode.c -o ext/standard/uuencode.lo 
+ext/standard/filters.lo: /src/php-7.3.0/ext/standard/filters.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/filters.c -o ext/standard/filters.lo 
+ext/standard/proc_open.lo: /src/php-7.3.0/ext/standard/proc_open.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/proc_open.c -o ext/standard/proc_open.lo 
+ext/standard/streamsfuncs.lo: /src/php-7.3.0/ext/standard/streamsfuncs.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/streamsfuncs.c -o ext/standard/streamsfuncs.lo 
+ext/standard/http.lo: /src/php-7.3.0/ext/standard/http.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/http.c -o ext/standard/http.lo 
+ext/standard/password.lo: /src/php-7.3.0/ext/standard/password.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/password.c -o ext/standard/password.lo 
+ext/standard/random.lo: /src/php-7.3.0/ext/standard/random.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/random.c -o ext/standard/random.lo 
+ext/standard/net.lo: /src/php-7.3.0/ext/standard/net.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/net.c -o ext/standard/net.lo 
+ext/standard/hrtime.lo: /src/php-7.3.0/ext/standard/hrtime.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Iext/standard/ -I/src/php-7.3.0/ext/standard/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/standard/hrtime.c -o ext/standard/hrtime.lo 
+ext/tokenizer/tokenizer.lo: /src/php-7.3.0/ext/tokenizer/tokenizer.c
+	$(LIBTOOL) --mode=compile $(CC)  -Iext/tokenizer/ -I/src/php-7.3.0/ext/tokenizer/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/tokenizer/tokenizer.c -o ext/tokenizer/tokenizer.lo 
+ext/tokenizer/tokenizer_data.lo: /src/php-7.3.0/ext/tokenizer/tokenizer_data.c
+	$(LIBTOOL) --mode=compile $(CC)  -Iext/tokenizer/ -I/src/php-7.3.0/ext/tokenizer/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/ext/tokenizer/tokenizer_data.c -o ext/tokenizer/tokenizer_data.lo 
+TSRM/TSRM.lo: /src/php-7.3.0/TSRM/TSRM.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -ITSRM/ -I/src/php-7.3.0/TSRM/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/TSRM/TSRM.c -o TSRM/TSRM.lo 
+TSRM/tsrm_strtok_r.lo: /src/php-7.3.0/TSRM/tsrm_strtok_r.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -ITSRM/ -I/src/php-7.3.0/TSRM/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/TSRM/tsrm_strtok_r.c -o TSRM/tsrm_strtok_r.lo 
+main/main.lo: /src/php-7.3.0/main/main.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/main.c -o main/main.lo 
+main/snprintf.lo: /src/php-7.3.0/main/snprintf.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/snprintf.c -o main/snprintf.lo 
+main/spprintf.lo: /src/php-7.3.0/main/spprintf.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/spprintf.c -o main/spprintf.lo 
+main/php_sprintf.lo: /src/php-7.3.0/main/php_sprintf.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/php_sprintf.c -o main/php_sprintf.lo 
+main/fopen_wrappers.lo: /src/php-7.3.0/main/fopen_wrappers.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/fopen_wrappers.c -o main/fopen_wrappers.lo 
+main/alloca.lo: /src/php-7.3.0/main/alloca.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/alloca.c -o main/alloca.lo 
+main/php_scandir.lo: /src/php-7.3.0/main/php_scandir.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/php_scandir.c -o main/php_scandir.lo 
+main/php_ini.lo: /src/php-7.3.0/main/php_ini.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/php_ini.c -o main/php_ini.lo 
+main/SAPI.lo: /src/php-7.3.0/main/SAPI.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/SAPI.c -o main/SAPI.lo 
+main/rfc1867.lo: /src/php-7.3.0/main/rfc1867.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/rfc1867.c -o main/rfc1867.lo 
+main/php_content_types.lo: /src/php-7.3.0/main/php_content_types.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/php_content_types.c -o main/php_content_types.lo 
+main/strlcpy.lo: /src/php-7.3.0/main/strlcpy.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/strlcpy.c -o main/strlcpy.lo 
+main/strlcat.lo: /src/php-7.3.0/main/strlcat.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/strlcat.c -o main/strlcat.lo 
+main/explicit_bzero.lo: /src/php-7.3.0/main/explicit_bzero.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/explicit_bzero.c -o main/explicit_bzero.lo 
+main/mergesort.lo: /src/php-7.3.0/main/mergesort.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/mergesort.c -o main/mergesort.lo 
+main/reentrancy.lo: /src/php-7.3.0/main/reentrancy.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/reentrancy.c -o main/reentrancy.lo 
+main/php_variables.lo: /src/php-7.3.0/main/php_variables.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/php_variables.c -o main/php_variables.lo 
+main/php_ticks.lo: /src/php-7.3.0/main/php_ticks.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/php_ticks.c -o main/php_ticks.lo 
+main/network.lo: /src/php-7.3.0/main/network.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/network.c -o main/network.lo 
+main/php_open_temporary_file.lo: /src/php-7.3.0/main/php_open_temporary_file.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/php_open_temporary_file.c -o main/php_open_temporary_file.lo 
+main/output.lo: /src/php-7.3.0/main/output.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/output.c -o main/output.lo 
+main/getopt.lo: /src/php-7.3.0/main/getopt.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/getopt.c -o main/getopt.lo 
+main/php_syslog.lo: /src/php-7.3.0/main/php_syslog.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/php_syslog.c -o main/php_syslog.lo 
+main/fastcgi.lo: /src/php-7.3.0/main/fastcgi.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/fastcgi.c -o main/fastcgi.lo 
+main/streams/streams.lo: /src/php-7.3.0/main/streams/streams.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/streams/ -I/src/php-7.3.0/main/streams/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/streams/streams.c -o main/streams/streams.lo 
+main/streams/cast.lo: /src/php-7.3.0/main/streams/cast.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/streams/ -I/src/php-7.3.0/main/streams/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/streams/cast.c -o main/streams/cast.lo 
+main/streams/memory.lo: /src/php-7.3.0/main/streams/memory.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/streams/ -I/src/php-7.3.0/main/streams/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/streams/memory.c -o main/streams/memory.lo 
+main/streams/filter.lo: /src/php-7.3.0/main/streams/filter.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/streams/ -I/src/php-7.3.0/main/streams/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/streams/filter.c -o main/streams/filter.lo 
+main/streams/plain_wrapper.lo: /src/php-7.3.0/main/streams/plain_wrapper.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/streams/ -I/src/php-7.3.0/main/streams/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/streams/plain_wrapper.c -o main/streams/plain_wrapper.lo 
+main/streams/userspace.lo: /src/php-7.3.0/main/streams/userspace.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/streams/ -I/src/php-7.3.0/main/streams/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/streams/userspace.c -o main/streams/userspace.lo 
+main/streams/transports.lo: /src/php-7.3.0/main/streams/transports.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/streams/ -I/src/php-7.3.0/main/streams/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/streams/transports.c -o main/streams/transports.lo 
+main/streams/xp_socket.lo: /src/php-7.3.0/main/streams/xp_socket.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/streams/ -I/src/php-7.3.0/main/streams/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/streams/xp_socket.c -o main/streams/xp_socket.lo 
+main/streams/mmap.lo: /src/php-7.3.0/main/streams/mmap.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/streams/ -I/src/php-7.3.0/main/streams/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/streams/mmap.c -o main/streams/mmap.lo 
+main/streams/glob_wrapper.lo: /src/php-7.3.0/main/streams/glob_wrapper.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/streams/ -I/src/php-7.3.0/main/streams/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/main/streams/glob_wrapper.c -o main/streams/glob_wrapper.lo 
+main/internal_functions.lo: main/internal_functions.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c main/internal_functions.c -o main/internal_functions.lo 
+main/internal_functions_cli.lo: main/internal_functions_cli.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -Imain/ -I/src/php-7.3.0/main/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c main/internal_functions_cli.c -o main/internal_functions_cli.lo 
+Zend/zend_language_parser.lo: /src/php-7.3.0/Zend/zend_language_parser.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_language_parser.c -o Zend/zend_language_parser.lo 
+Zend/zend_language_scanner.lo: /src/php-7.3.0/Zend/zend_language_scanner.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_language_scanner.c -o Zend/zend_language_scanner.lo 
+Zend/zend_ini_parser.lo: /src/php-7.3.0/Zend/zend_ini_parser.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_ini_parser.c -o Zend/zend_ini_parser.lo 
+Zend/zend_ini_scanner.lo: /src/php-7.3.0/Zend/zend_ini_scanner.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_ini_scanner.c -o Zend/zend_ini_scanner.lo 
+Zend/zend_alloc.lo: /src/php-7.3.0/Zend/zend_alloc.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_alloc.c -o Zend/zend_alloc.lo 
+Zend/zend_compile.lo: /src/php-7.3.0/Zend/zend_compile.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_compile.c -o Zend/zend_compile.lo 
+Zend/zend_constants.lo: /src/php-7.3.0/Zend/zend_constants.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_constants.c -o Zend/zend_constants.lo 
+Zend/zend_dtrace.lo: /src/php-7.3.0/Zend/zend_dtrace.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_dtrace.c -o Zend/zend_dtrace.lo 
+Zend/zend_execute_API.lo: /src/php-7.3.0/Zend/zend_execute_API.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_execute_API.c -o Zend/zend_execute_API.lo 
+Zend/zend_highlight.lo: /src/php-7.3.0/Zend/zend_highlight.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_highlight.c -o Zend/zend_highlight.lo 
+Zend/zend_llist.lo: /src/php-7.3.0/Zend/zend_llist.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_llist.c -o Zend/zend_llist.lo 
+Zend/zend_vm_opcodes.lo: /src/php-7.3.0/Zend/zend_vm_opcodes.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_vm_opcodes.c -o Zend/zend_vm_opcodes.lo 
+Zend/zend_opcode.lo: /src/php-7.3.0/Zend/zend_opcode.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_opcode.c -o Zend/zend_opcode.lo 
+Zend/zend_operators.lo: /src/php-7.3.0/Zend/zend_operators.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_operators.c -o Zend/zend_operators.lo 
+Zend/zend_ptr_stack.lo: /src/php-7.3.0/Zend/zend_ptr_stack.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_ptr_stack.c -o Zend/zend_ptr_stack.lo 
+Zend/zend_stack.lo: /src/php-7.3.0/Zend/zend_stack.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_stack.c -o Zend/zend_stack.lo 
+Zend/zend_variables.lo: /src/php-7.3.0/Zend/zend_variables.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_variables.c -o Zend/zend_variables.lo 
+Zend/zend.lo: /src/php-7.3.0/Zend/zend.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend.c -o Zend/zend.lo 
+Zend/zend_API.lo: /src/php-7.3.0/Zend/zend_API.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_API.c -o Zend/zend_API.lo 
+Zend/zend_extensions.lo: /src/php-7.3.0/Zend/zend_extensions.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_extensions.c -o Zend/zend_extensions.lo 
+Zend/zend_hash.lo: /src/php-7.3.0/Zend/zend_hash.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_hash.c -o Zend/zend_hash.lo 
+Zend/zend_list.lo: /src/php-7.3.0/Zend/zend_list.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_list.c -o Zend/zend_list.lo 
+Zend/zend_builtin_functions.lo: /src/php-7.3.0/Zend/zend_builtin_functions.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_builtin_functions.c -o Zend/zend_builtin_functions.lo 
+Zend/zend_sprintf.lo: /src/php-7.3.0/Zend/zend_sprintf.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_sprintf.c -o Zend/zend_sprintf.lo 
+Zend/zend_ini.lo: /src/php-7.3.0/Zend/zend_ini.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_ini.c -o Zend/zend_ini.lo 
+Zend/zend_sort.lo: /src/php-7.3.0/Zend/zend_sort.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_sort.c -o Zend/zend_sort.lo 
+Zend/zend_multibyte.lo: /src/php-7.3.0/Zend/zend_multibyte.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_multibyte.c -o Zend/zend_multibyte.lo 
+Zend/zend_ts_hash.lo: /src/php-7.3.0/Zend/zend_ts_hash.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_ts_hash.c -o Zend/zend_ts_hash.lo 
+Zend/zend_stream.lo: /src/php-7.3.0/Zend/zend_stream.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_stream.c -o Zend/zend_stream.lo 
+Zend/zend_iterators.lo: /src/php-7.3.0/Zend/zend_iterators.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_iterators.c -o Zend/zend_iterators.lo 
+Zend/zend_interfaces.lo: /src/php-7.3.0/Zend/zend_interfaces.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_interfaces.c -o Zend/zend_interfaces.lo 
+Zend/zend_exceptions.lo: /src/php-7.3.0/Zend/zend_exceptions.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_exceptions.c -o Zend/zend_exceptions.lo 
+Zend/zend_strtod.lo: /src/php-7.3.0/Zend/zend_strtod.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_strtod.c -o Zend/zend_strtod.lo 
+Zend/zend_gc.lo: /src/php-7.3.0/Zend/zend_gc.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_gc.c -o Zend/zend_gc.lo 
+Zend/zend_closures.lo: /src/php-7.3.0/Zend/zend_closures.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_closures.c -o Zend/zend_closures.lo 
+Zend/zend_float.lo: /src/php-7.3.0/Zend/zend_float.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_float.c -o Zend/zend_float.lo 
+Zend/zend_string.lo: /src/php-7.3.0/Zend/zend_string.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_string.c -o Zend/zend_string.lo 
+Zend/zend_signal.lo: /src/php-7.3.0/Zend/zend_signal.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_signal.c -o Zend/zend_signal.lo 
+Zend/zend_generators.lo: /src/php-7.3.0/Zend/zend_generators.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_generators.c -o Zend/zend_generators.lo 
+Zend/zend_virtual_cwd.lo: /src/php-7.3.0/Zend/zend_virtual_cwd.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_virtual_cwd.c -o Zend/zend_virtual_cwd.lo 
+Zend/zend_ast.lo: /src/php-7.3.0/Zend/zend_ast.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_ast.c -o Zend/zend_ast.lo 
+Zend/zend_objects.lo: /src/php-7.3.0/Zend/zend_objects.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_objects.c -o Zend/zend_objects.lo 
+Zend/zend_object_handlers.lo: /src/php-7.3.0/Zend/zend_object_handlers.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_object_handlers.c -o Zend/zend_object_handlers.lo 
+Zend/zend_objects_API.lo: /src/php-7.3.0/Zend/zend_objects_API.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_objects_API.c -o Zend/zend_objects_API.lo 
+Zend/zend_default_classes.lo: /src/php-7.3.0/Zend/zend_default_classes.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_default_classes.c -o Zend/zend_default_classes.lo 
+Zend/zend_inheritance.lo: /src/php-7.3.0/Zend/zend_inheritance.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_inheritance.c -o Zend/zend_inheritance.lo 
+Zend/zend_smart_str.lo: /src/php-7.3.0/Zend/zend_smart_str.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_smart_str.c -o Zend/zend_smart_str.lo 
+Zend/zend_cpuinfo.lo: /src/php-7.3.0/Zend/zend_cpuinfo.c
+	$(LIBTOOL) --mode=compile $(CC) 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_cpuinfo.c -o Zend/zend_cpuinfo.lo 
+Zend/zend_execute.lo: /src/php-7.3.0/Zend/zend_execute.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -IZend/ -I/src/php-7.3.0/Zend/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /src/php-7.3.0/Zend/zend_execute.c -o Zend/zend_execute.lo 
