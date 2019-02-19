@@ -31,11 +31,13 @@ docker run --rm -v $(pwd):/src trzeci/emscripten:sdk-tag-1.38.25-64bit bash buil
 
 Steps:
 
-1. Setup emsdk (>= 1.38.11), see [Installation Instructions](https://github.com/juj/emsdk#installation-instructions)
-2. Run `bash build.sh`
-3. npm install http-server -g
+1. RUN `./bash.sh`
+2. In the bash prompt run `./build.sh`
+3. In a new session RUN `npm install http-server -g`
 4. http-server .
 5. open http://localhost:8081
+
+When recompiling try running `./emmake.sh` from within the bash prompt to speed things up.
 
 
 ## Known issues
