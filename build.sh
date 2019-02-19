@@ -44,6 +44,7 @@ emcc -O3 \
   -s ERROR_ON_UNDEFINED_SYMBOLS=0 \
   --preload-file Zend/bench.php \
   --preload-file wordpress@/var/wordpress \
+  --preload-file etc@/usr/local/etc \
   libs/libphp7.a pib_eval.o -o out/php.html
 
 cp out/php.wasm out/php.js out/php.data ..
